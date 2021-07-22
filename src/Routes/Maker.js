@@ -1,63 +1,30 @@
-// import React from 'react'
-
-// function Maker() {
-//     return (
-//         <div>
-//             hi
-//         </div>
-//     )
-// }
-
-// export default Maker
-import React, { useEffect, useState ,useMemo, useRef} from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import { Button } from '@material-ui/core';
-import html2canvas from 'html2canvas';
 import '../styles/index.css';
 import '../styles/playhead.css';
-import BeatMachine from '../Components/BeatMachine';
 import InstrumentRow from '../Components/InstrumentRow';
 import Bpm from '../helpers/useBPM';
 import Modal from '../Components/Modal';
 import Tempo from '../Components/Tempo';
 import { instruments } from '../helpers/instruments';
-
 import { Howl } from 'howler';
-import useStyles from '../App.styles';
 import { Fragment } from 'react';
-import { exportComponentAsPNG } from "react-component-export-image"
 import ColorPicker from '../Components/ColorPicker.js';
-import {MintCluster} from '../clusters/mint-cluster'
 import playbutton from "../img/btn_play_circle_purple.png"
 import stopbutton from "../img/btn_stop_circle_purple.png"
 import bpmbutton from "../img/btn_tempo_circle_purple.png"
 const arr1= Array.from(Array(16), () => new Array(32).fill(0));
 
 const Home = () => {
-
-
-
   const [ modalOpen, setModalOpen ] = useState(false);
-
   const openModal = () => {
       setModalOpen(true);
   }
   const closeModal = () => {
       setModalOpen(false);
   }
-
-
-  const myPortalContainer = document.getElementById("portal");
-  const myCanvas = document.querySelector("div#portal canvas");
-
-
   const panelRef = useRef()
-
   const [selectedColor, setColor] = useState("#000000");
-
-
-
-
-
 
   function changeColor(color) {
     setColor(color.hex);
@@ -65,7 +32,6 @@ const Home = () => {
   //beat machine initial states
   const [isPlaying, setIsPlaying] = useState(false);
   const [tempo, setTempo] = useState(120);
-
   const [squares, setSquares] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]);
   // state tracking for our dumb component when !isPlaying
   const [playHeadArray, setPlayHeadArray] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]);
@@ -103,9 +69,6 @@ const Home = () => {
     const eventValue = event.target.value;
     setTempo(parseInt(eventValue));
   };
-
-
-
 
   //Animation Specific functions
   //helper function for playHeadLoop()
@@ -182,9 +145,7 @@ const Home = () => {
 
     for (let i = 0; i < 31; i++) {
       playSound(array[i]);
-
     }
-
   };
 
   //collate all active sound samples on the current beat into an array from instruments
@@ -231,7 +192,6 @@ const Home = () => {
   const instrumentRows = instruments.map((instrument, row ) => {
     return (
       <InstrumentRow
-      
         key={row}
         row={row}
         updateGrid={(row, column, toggle,color) => updateGrid(row, column, toggle,color)}
@@ -243,7 +203,6 @@ const Home = () => {
     );
   });
   
-
   //Conditionally Render Playhead if isPlaying
   const playHead = () => {
     if (isPlaying) {
@@ -295,27 +254,9 @@ const Home = () => {
         </>
       );
     }
-
-
-
   };
-  const handleClick = () => {
-    
-  
-    
-  
-  }
   
   const colorArray = arr1.toString();
-
-  const [nftName, setNftName] = useState("initial value")
-
-  function set() {
-    setNftName(document.getElementById("input").value)
-    console.log(nftName)
-  }
-
-
   //store playHeadComponent in a variable for readability
   const playHeadComponent = playHead();
 
@@ -324,79 +265,43 @@ const Home = () => {
     <Fragment>
 
     <div className="container">
-      <div className="titleImg">
-
- 
-      </div>
+      <div className="titleImg"></div>
       <div className="progress_container_purple">
-     
         <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
           <img src={playbutton}></img>
         </Button>
         <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
           <img src={stopbutton}></img>
         </Button>
-
-    
-      
-      
       </div>
       <div className="musicplay">{playHeadComponent}</div>
-   <div className="mint">
-    <Button
-    style={{ background: "ffffff", padding: '27px' }}
-  onClick={openModal}>Mint!
-      </Button>
-     
-      <Modal open={ modalOpen } close={ closeModal } header="Modal heading">
-      </Modal>
+      <div className="mint">
+        <Button
+         className="mintButton"
+         style={{ color: 'white'}}
+         onClick={openModal}>Mint!
+        </Button>
+        <Modal colorArray= {colorArray} open={ modalOpen } close={ closeModal } header="Mint your NFT">
+        </Modal>
       </div>
-   
       <br />
- 
-  
-<div className="volTempo">
-<Tempo   value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
-  <img className="volTempo2" src={bpmbutton}></img>
-</Tempo>
-</div>
-<div className="colorpick">
-<ColorPicker id="colorpicker"  color={selectedColor} onChangeComplete={changeColor} onSetColor={setColor} />
-</div>
-
+      <div className="volTempo">
+        <Tempo value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
+          <img className="volTempo2" src={bpmbutton}></img>
+        </Tempo>
+      </div>
+      <div className="colorpick">
+        <ColorPicker id="colorpicker"  color={selectedColor} onChangeComplete={changeColor} onSetColor={setColor} />
+      </div>
       <br />
       <table  border="2" className="tabledgn">
-        <tbody id="table"  ref={panelRef}>
-         
+        <tbody id="table"  ref={panelRef}> 
           {instrumentRows}
-         
         </tbody>
       </table>
-    
-    <div>
-    <Button
-    style={{ background: "ffffff", padding: '27px' }}
-    
-    onClick={() =>{ handleClick();}}>Create
-      </Button>
-    </div>
-
-    Name of NFT:     
-    <div>
-      <input type="text" id="input"></input>
-      <button onClick={set}>set Name</button>
-    </div>
-
-    <div>
-    <MintCluster name={nftName} array={colorArray} />
-    </div>
-
-    </div>
+      </div>
     </Fragment>
   );
-
-
-  
 };
 
 export default Home;
