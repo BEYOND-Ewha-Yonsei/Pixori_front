@@ -10,7 +10,10 @@ function Token() {
 
     if (cu.addr){
       return (
-        <TokenCluster address={cu.addr} />
+        <div className="Token">
+        <TokenCluster addresss={"0xdb16a5e14c410280"} address={cu.addr} />
+        </div>
+        
       )
     }
     else{
