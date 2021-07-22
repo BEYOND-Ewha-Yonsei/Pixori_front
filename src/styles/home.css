@@ -1,304 +1,424 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
 .gnb_bg1 {
-
   width: 1920px;
   height: 112px;
   flex-grow: 0;
   padding: 40px 330px 38px 72px;
   background-color: #f5f7fa;
-  
 }
 
 .gnb_bg {
-  
-    width: 1920px;
-    height: 150px;
-    flex-grow: 0;
-    padding: 40px 330px 38px 72px;
-    background-color: #f5f7fa;
-    
-  }
-  
-  .logo {
-    width: 108px;
-    height: 28px;
-    margin: 6px 107px 0 162px;
-    padding: 0 0 0px;
+  width: 1920px;
+  height: 150px;
+  flex-grow: 0;
+  padding: 40px 330px 38px 72px;
+  background-color: #f5f7fa;
+}
 
+.logo {
+  width: 108px;
+  height: 28px;
+  margin: 6px 107px 0 162px;
+  padding: 0 0 0px;
+}
 
-  }
+.Vector1 {
+  width: 8.2px;
+  height: 20.3px;
+  flex-grow: 0;
+  margin: 5.3px 2.9px 8.5px 2.9px;
+  background-color: #846cff;
+}
 
-  .Vector1 {
-    width: 8.2px;
-    height: 20.3px;
-    flex-grow: 0;
-    margin: 5.3px 2.9px 8.5px 2.9px;
-    background-color: #846cff;
+.Frame-1 {
+  width: 252px;
+  height: 32px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 71px 373px 0 97.8px;
+  padding: 4px 10px 1px;
+  background-color: #846cff;
+}
 
+.What-is-Pixori {
+  width: 724px;
+  height: 51px;
+  margin: 52px 594px 33.5px 602px;
+  -webkit-text-stroke: 3px #846cff;
+  font-family: SpaceMono;
+  font-size: 46px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+}
 
-  }
-  .Frame-1 {
-    width: 252px;
-    height: 32px;
-    flex-grow: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 71px 373px 0 97.8px;
-    padding: 4px 10px 1px;
-    background-color: #846cff;
-  }
-  .What-is-Pixori {
-    width: 724px;
-    height: 51px;
-    margin: 52px 594px 33.5px 602px;
-    -webkit-text-stroke: 3px #846cff;
-    font-family: SpaceMono;
-    font-size: 46px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.34;
-    letter-spacing: normal;
-    text-align: center;
-  }
-    .Create-your-own-NFTs {
-        width: 232px;
-        height: 27px;
-        flex-grow: 0;
-        font-family: SpaceMono;
-        font-size: 18px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        
-        text-align: left;
-        color: #ffffff;
-      }
-    .Vector4 {
-        width: 16.3px;
-        height: 20.3px;
-        flex-grow: 0;
-        margin: 5.6px 2.9px 8.1px 2.9px;
-        background-color: #846cff;
+.Create-your-own-NFTs {
+  width: 232px;
+  height: 27px;
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
 
-    }
-    .font {
-      width: 1196px;
-      height: 207px;
-      margin: 0 0 44px;
-      -webkit-text-stroke: 3px #ffffff;
-      font-family:'Space Mono',monospace;
-      font-size: 54px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      color:#846cff;
-      line-height: 1.34;
-      letter-spacing: normal;
-      text-align: center;
-        
-    }
-    .Vector5{
-        width: 8.2px;
-        height: 20.3px;
-        flex-grow: 0;
-        margin: 5.2px 107px 8.5px 2.9px;
-        background-color: #846cff;
-        
-    }
-    
-    .Rectangle-491 {
-    display: inline-block;
-    width: 1920px;
-    height: 588px;
-    margin: 112px 0 52px;
-    padding: 59px 362px 61px;
-    border: solid 1px #846cff;
-    background-color: #846cff
-    }
-    .grid {
-   
-      width: 1920px;
-      height: 503px;
+.Vector4 {
+  width: 16.3px;
+  height: 20.3px;
+  flex-grow: 0;
+  margin: 5.6px 2.9px 8.1px 2.9px;
+  background-color: #846cff;
+}
+.font {
+  width: 1196px;
+  height: 207px;
+  margin: 0 0 44px;
+  -webkit-text-stroke: 3px #ffffff;
+  font-family: "Space Mono", monospace;
+  font-size: 54px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #846cff;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+}
 
-      border-style: solid;
-      border-width: 1px;
-      border-image-source: linear-gradient(to top, #70f6f3, #846cff);
-      border-image-slice: 1;
-      }
-      .Frame-5 {
-        width: 241px;
-        height: 41px;
-        flex-grow: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 10px;
-        margin: 0 378px 34px 103.8px;
-        padding: 4px 10px 1px;
-        background-color: #846cff;
-      }
-  .Drawing {
-    width: 105px;
-    height: 26px;
-    flex-grow: 0;
-    margin: 6px 44px 2px 107px;
-    font-family: SpaceMono;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: rgba(132, 108, 255, 0.7);
-  }
-  .img_pixelart_bird {
-      display: bl;
-    width: 260px;
-    height: 390px;
-    margin: 0 0 0 315px;
+.Vector5 {
+  width: 8.2px;
+  height: 20.3px;
+  flex-grow: 0;
+  margin: 5.2px 107px 8.5px 2.9px;
+  background-color: #846cff;
+}
 
-  }
-  
-  .img_pixelart_cherry {
-    width: 1920px;
-    height: 503px;
-    margin: 33.5px 0 172.5px;
-    padding: 34.5px 340px 88.5px;
-    object-fit: contain;
-    border-style: solid;
-    border-width: 1px;
-    border-image-source: linear-gradient(to top, #70f6f3, #846cff);
-    border-image-slice: 1;
-  }
-  .LETS-Start {
-    width: 152px;
-    height: 23px;
-    font-family: SpaceMono;
-    font-size: 20px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: italic;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #846cff;
+.Rectangle-491 {
+  display: inline-block;
+  width: 1920px;
+  height: 588px;
+  margin: 112px 0 52px;
+  padding: 59px 362px 61px;
+  border: solid 1px #846cff;
+  background-color: #846cff;
+}
 
-  }
-  .collection1 {
-    width: 140px;
-    height: 26px;
-    flex-grow: 0;
-    margin: 6px 43px 2px 44px;
-    font-family: SpaceMono;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: rgba(132, 108, 255, 0.7);
-  }
+.grid {
+  width: 1920px;
+  height: 503px;
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(to top, #70f6f3, #846cff);
+  border-image-slice: 1;
+}
 
-  .collection2 {
-    width: 119px;
-    height: 26px;
-    flex-grow: 0;
-    margin: 6px 322px 2px 43px;
-    font-family: SpaceMono;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: rgba(132, 108, 255, 0.7);
-  }   
-  
+.Frame-5 {
+  width: 241px;
+  height: 41px;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 378px 34px 103.8px;
+  padding: 4px 10px 1px;
+  background-color: #846cff;
+}
 
+.Drawing {
+  width: 105px;
+  height: 26px;
+  flex-grow: 0;
+  margin: 6px 44px 2px 107px;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(132, 108, 255, 0.7);
+}
 
+.img_pixelart_bird {
+  display: bl;
+  width: 260px;
+  height: 390px;
+  margin: 0 0 0 315px;
+}
 
-  .login{
-    position: relative;
-    left: 1200px;
-    top: 100px;
-    width: 185px;
-    height: 55px;
-    flex-grow: 0;
-    margin: 0 32px 0 184px;
-    padding: 5px 25px 17px 33px;
-    border: solid 1px #846cff;
-    background-color: #f5f7fa;
-    font-family: SpaceMono;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #846cff;
-  }
+.img_pixelart_cherry {
+  width: 1920px;
+  height: 503px;
+  margin: 33.5px 0 172.5px;
+  padding: 34.5px 340px 88.5px;
+  object-fit: contain;
+  border-style: solid;
+  border-width: 1px;
+  border-image-source: linear-gradient(to top, #70f6f3, #846cff);
+  border-image-slice: 1;
+}
 
+.LETS-Start {
+  width: 152px;
+  height: 23px;
+  font-family: SpaceMono;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+}
 
-  .Signrectangle{
-    flex-grow: 0;
-    font-family: SpaceMono;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    left: 1200px;
-    top: 100px;
-    width: 185px;
-    height: 55px;
-    flex-grow: 0;
-    margin: 0 0 0 32px;
-    padding: 12px 9px 16px;
-    border: solid 1px #846cff;
-    background-color: #846cff;
-  }
-  .Rectangle-492 {
-    width: 256px;
-    height: 43px;
-    margin: 91px 470px 0;
-    padding: 1.3px 18.7px 10.8px 18.7px;
-    border: solid 1px #846cff;
-    background-color: #70f6f3;
-    position: relative;
- 
-    font-family: SpaceMono;
-    font-size: 28px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #846cff;
-  }
-  
-  .Rectangle-467 {
-    width: 1920px;
-    height: 180px;
-    margin: 65px 0 0;
-    padding: 24px 805px 0 329px;
-    background-color: #f5f7fa;
-  }
+.collection1 {
+  width: 140px;
+  height: 26px;
+  flex-grow: 0;
+  margin: 6px 43px 2px 44px;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(132, 108, 255, 0.7);
+}
+
+.collection2 {
+  width: 119px;
+  height: 26px;
+  flex-grow: 0;
+  margin: 6px 322px 2px 43px;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(132, 108, 255, 0.7);
+}
+
+.login {
+  position: relative;
+  left: 1200px;
+  top: 80px;
+  width: 185px;
+  height: 55px;
+  flex-grow: 0;
+  margin: 0 32px 0 184px;
+  padding: 5px 25px 17px 33px;
+  border: solid 1px #846cff;
+  background-color: #f5f7fa;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+}
+
+.logout {
+  position: relative;
+  left: 1530px;
+  top: 190px;
+  width: 185px;
+  height: 55px;
+  flex-grow: 0;
+  margin: 0 32px 0 184px;
+  padding: 5px 25px 17px 33px;
+  border: solid 1px #846cff;
+  background-color: #f5f7fa;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+}
+
+.Signrectangle {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  left: 1200px;
+  top: 80px;
+  width: 185px;
+  height: 55px;
+  flex-grow: 0;
+  margin: 0 0 0 32px;
+  padding: 12px 9px 16px;
+  border: solid 1px #846cff;
+  background-color: #846cff;
+}
+
+.Rectangle-492 {
+  width: 256px;
+  height: 43px;
+  margin: 91px 470px 0;
+  padding: 1.3px 18.7px 10.8px 18.7px;
+  border: solid 1px #846cff;
+  background-color: #70f6f3;
+  position: relative;
+  font-family: SpaceMono;
+  font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+}
+
+.Rectangle-467 {
+  width: 1920px;
+  height: 180px;
+  margin: 65px 0 0;
+  padding: 24px 805px 0 329px;
+  background-color: #f5f7fa;
+}
+
+.Profile {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  position: relative;
+  left: 1350px;
+  top: 110px;
+  font-size: 15px;
+  color: #846cff;
+  margin-left: 10px;
+}
+
+.UpdateProfile {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  width: 130px;
+  height: 40px;
+  flex-grow: 0;
+  margin: 0 0 0 10px;
+  padding: 12px 910x 16px;
+  border: solid 1px #846cff;
+  background-color: #846cff;
+}
+
+.ProfileCluster {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  position: relative;
+  left: 1350px;
+  top: 110px;
+  font-size: 15px;
+  color: #846cff;
+  margin-left: 10px;
+}
+
+.ProfileRectangle {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+  width: 130px;
+  height: 40px;
+  flex-grow: 0;
+  padding: 12px 10px 16px;
+  border: solid 1px #846cff;
+  background-color: #f5f7fa;
+}
+
+.MintInputRectangle {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+  width: 200px;
+  height: 40px;
+  flex-grow: 0;
+  padding: 12px 10px 16px;
+  border: solid 1px #846cff;
+  background-color: #ffffff;
+}
+
+.MintRectangle {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+  width: 90px;
+  height: 30px;
+  flex-grow: 0;
+  background-color: #70f6f3;
+  margin-left: 10px;
+}
+
+.Token {
+  flex-grow: 0;
+  font-family: SpaceMono;
+  position: relative;
+  top: 110px;
+  font-size: 20px;
+  color: #846cff;
+  margin-left: 10px;
+}

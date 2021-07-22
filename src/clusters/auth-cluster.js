@@ -1,6 +1,4 @@
-// File: ./src/clusters/auth-cluster.js
-
-import React, {useState, useEffect, Fragment} from "react"
+import React, {Fragment} from "react"
 import {useCurrentUser} from "../hooks/current-user"
 import '../styles/home.css';
 function WithAuth() {
@@ -8,8 +6,7 @@ function WithAuth() {
 
   return !cu.loggedIn ? null : (
     <div>
-      <span>{cu.addr ?? "No Address"}</span>
-      <button className ="login" onClick={cu.logOut}>Log out</button>
+      <button className ="logout" onClick={cu.logOut}>Log out</button>
     </div>
   )
 }

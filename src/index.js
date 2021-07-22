@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/home.css'
 import App from './Components/App';
-
 import "./config"
 import {AuthCluster} from './clusters/auth-cluster';
 import {RecoilRoot} from "recoil"
 import {CurrentUserSubscription} from "./hooks/current-user"
-
 import {InitCluster} from "./clusters/init-cluster"
 import {ProfileCluster} from './clusters/profile-cluster'
 import {useCurrentUser} from "./hooks/current-user"
@@ -31,8 +29,8 @@ ReactDOM.render(
     <RecoilRoot>
       <AuthCluster className="auth"/>
       <CurrentUserSubscription />
-      <Init />
-      <Profile />
+      <Init className="ProfileCluster" />
+      <Profile className="ProfileCluster"/>
       <App />
     </RecoilRoot>
   </React.StrictMode>, document.getElementById('root'));

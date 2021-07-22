@@ -1,5 +1,3 @@
-// File: ./src/clusters/init-cluster.js
-
 import React, {useEffect} from "react"
 import {useCurrentUser} from "../hooks/current-user"
 import {useInit} from "../hooks/init"
@@ -17,19 +15,19 @@ useEffect(() => {
     init.check();
   }
   refetch();
-}, [address])
+}, [address, init])
 
  if (address == null) return null
  return (
-  <div>
+  <div className="Profile">
     <h3>My Address: {address}</h3>
     <ul>
       <li>
       <strong>Init Profile?: </strong>
          {init.isIdle && <span>{fmtBool(init.profile)}</span>}
          {!init.profile && cu.addr === address && init.isIdle && (
-           <button disabled={init.isProcessing} onClick={init.exec}>
-             Initialize Profile
+           <button className="UpdateProfile" disabled={init.isProcessing} onClick={init.exec}>
+             Initialize
            </button>
          )}
         {init.isProcessing && <span>PROCESSING</span>}
