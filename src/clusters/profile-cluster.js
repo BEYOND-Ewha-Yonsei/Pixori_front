@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect} from "react"
 import {useCurrentUser} from "../hooks/current-user"
 import {useProfile} from "../hooks/profile"
+import '../styles/home.css';
 
 function ProfileForm() {
   const cu = useCurrentUser()
@@ -17,8 +18,8 @@ function ProfileForm() {
 
   return (
     <div>
-      <input value={name} onChange={e => setName(e.target.value)} />
-      {profile.isIdle && <button onClick={submit}>Update Name</button>}
+      <input className="profileInput" value={name} onChange={e => setName(e.target.value)} />
+      {profile.isIdle && <button className="updateProfile" onClick={submit}>Update Name</button>}
       {profile.isProcessing && <span>PROCESSING</span>}
     </div>
   )
@@ -38,16 +39,16 @@ export function ProfileCluster({address}) {
   if (address == null) return null
 
   return (
-    <div>
-      {profile.isCurrentUser && <ProfileForm />}
+    <div className="profileCluster">
       <ul>
         <li>
           <strong>My Name: </strong>
           <span>{profile.name}</span>
-          {profile.isCurrentUser && <span> - It's your name</span>}
+          {profile.isCurrentUser && <span></span>}
           {profile.isProcessing && <span>PROCESSING</span>}
         </li>
       </ul>
+          {profile.isCurrentUser && <ProfileForm />}
     </div>
   )
 }

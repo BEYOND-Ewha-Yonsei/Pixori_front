@@ -1,8 +1,7 @@
-// File: ./src/clusters/init-cluster.js
-
 import React, {useEffect} from "react"
 import {useCurrentUser} from "../hooks/current-user"
 import {useInit} from "../hooks/init"
+import '../styles/home.css';
 
 const fmtBool = bool => (bool ? "yes" : "no")
 
@@ -21,7 +20,7 @@ useEffect(() => {
 
  if (address == null) return null
  return (
-  <div>
+  <div className="initCluster">
     <h3>My Address: {address}</h3>
     <ul>
       <li>

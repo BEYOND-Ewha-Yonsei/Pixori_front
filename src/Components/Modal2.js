@@ -27,14 +27,10 @@ const Modal2 = ( props ) => {
                     </header>
                     <main>
                         <CurrentUserSubscription />
-                        <InitCluster address={address}/>
                         <ProfileCluster address={address}/>
-
-                        
+                        <InitCluster address={address}/>
                     </main>
                     <footer>
-               
-                    
                     </footer>
                 </section>
             ) : null }
