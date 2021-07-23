@@ -14,6 +14,7 @@ function Footer (){
   <div className ="Customer-services">Customer services</div>
   <div className ="Follow-us">Follow us</div>
 
+  <h4 className="Contact">Terms of service   &nbsp;&nbsp;|  &nbsp;&nbsp; Help&nbsp; &nbsp;| &nbsp; &nbsp;FAQs &nbsp;&nbsp; | &nbsp; &nbsp;Contact</h4>
 
 
 

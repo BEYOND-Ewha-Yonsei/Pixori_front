@@ -30,6 +30,7 @@ import {MintCluster} from '../clusters/mint-cluster'
 import playbutton from "../img/btn_play_circle_purple.png"
 import stopbutton from "../img/btn_stop_circle_purple.png"
 import bpmbutton from "../img/btn_tempo_circle_purple.png"
+import Footer from "../Components/Footer.js"
 const arr1= Array.from(Array(16), () => new Array(32).fill(0));
 
 const Home = () => {
@@ -385,6 +386,7 @@ onSetColor={setColor} />
         </tbody>
       </table>
     </div>
+    <Footer/>
     </Fragment>
   );
 
