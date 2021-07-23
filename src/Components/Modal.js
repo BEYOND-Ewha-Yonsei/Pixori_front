@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
 import "../styles/modal.css";
 import { Button } from '@material-ui/core';
-
+import {useCurrentUser} from "../hooks/current-user"
 import {MintCluster} from '../clusters/mint-cluster'
 
 const Modal = ( props ) => {
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
-
-    const { open, close, header ,arr1} = props;
-    const colorArray = {arr1}.toString();
+    const cu = useCurrentUser();
+    const { open, close, header ,arr } = props;
+    const colorArray = arr.toString();
     const [nftName, setNftName] = useState("initial value")
     function set() {
         setNftName(document.getElementById("input").value)
@@ -26,11 +26,8 @@ const Modal = ( props ) => {
                     <main>
                         <div>
                        <div className="input ">NFT Name</div>
-                       <input className="input2" type="text" id="input"></input>
-
-
-                       <button className="Rectangle-460"onClick={set} > Set Name</button>
-                       <MintCluster name={nftName} array={colorArray} />
+                       <input className="input2" type="text" id="input" onChange={set}></input>
+                       <MintCluster name={nftName} array={colorArray} address={cu.addr}/>
                        </div>
                     </main>
                     <footer>

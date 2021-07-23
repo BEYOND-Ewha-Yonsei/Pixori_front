@@ -323,16 +323,6 @@ const Home = () => {
     
   
   }
-  
-  const colorArray = arr1.toString();
-
-  const [nftName, setNftName] = useState("initial value")
-
-  function set() {
-    setNftName(document.getElementById("input").value)
-    console.log(nftName)
-  }
-
 
   //store playHeadComponent in a variable for readability
   const playHeadComponent = playHead();
@@ -363,7 +353,7 @@ const Home = () => {
    <div className="mint">
     <Button
     style={{ background: "ffffff", padding: '27px' }}
-  onClick={openModal}>Mint!
+    onClick={openModal}>Mint!
       </Button>
      
       <Modal open={ modalOpen } close={ closeModal } header="" arr={arr1}>
@@ -394,25 +384,6 @@ onSetColor={setColor} />
          
         </tbody>
       </table>
-    
-    <div>
-    <Button
-    style={{ background: "ffffff", padding: '27px' }}
-    
-    onClick={() =>{ handleClick();}}>Create
-      </Button>
-    </div>
-
-    Name of NFT:     
-    <div>
-      <input type="text" id="input"></input>
-      <button onClick={set}>set Name</button>
-    </div>
-
-    {/* <div>
-    <MintCluster name={nftName} array={colorArray} />
-    </div> */}
-
     </div>
     </Fragment>
   );

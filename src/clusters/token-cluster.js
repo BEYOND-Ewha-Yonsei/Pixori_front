@@ -2,32 +2,24 @@ import React, { useState } from "react";
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
 
-export function TokenCluster({address}) {
+export function TokenCluster({addresss, address}) {
   const [nftInfo, setNftInfo] = useState(null)
   const fetchTokenData = async () => {
     const encoded = await fcl
       .send([
         fcl.script`
-        import Pixori from 0x05f5f6e2056f588b
+        import Monday from 0xdb16a5e14c410280
 
-        pub fun main(address: Address): [{String: String}] {
-          let nftOwner = getAccount(address)  
-          let capability = nftOwner.getCapability<&{Pixori.NFTReceiver}>(/public/NFTReceiver)
-      
+        pub fun main(addresss: Address, address: String): [AnyStruct] {
+          let nftOwner = getAccount(addresss)  
+          let capability = nftOwner.getCapability<&{Monday.NFTReceiver}>(/public/MondayReceiver)
           let receiverRef = capability.borrow()
               ?? panic("Could not borrow the receiver reference")
-
-          let allIDs = receiverRef.getIDs()
-          var allMetadata: [{String: String}] = []
       
-          for id in allIDs {
-              allMetadata.append(receiverRef.getMetadata(id: id))
-          }
-
-          return allMetadata
+          return receiverRef.getMetadata(address: address)
         }
       `,
-      fcl.args([fcl.arg(address, t.Address)]),
+      fcl.args([fcl.arg(addresss, t.Address), fcl.arg(address, t.String)]),
       ])
     
     const decoded = await fcl.decode(encoded)
