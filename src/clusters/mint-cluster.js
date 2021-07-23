@@ -3,7 +3,7 @@ import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
 import { SHA3 } from 'sha3';
 import * as Elliptic from 'elliptic';
-
+import "../styles/modal.css";
 const ec = new Elliptic.ec('p256');
 
 function hashMsgHex(msgHex) {
@@ -122,7 +122,7 @@ async function mint() {
 }
 return (
   <div>
-    <button className="MintRectangle" onClick={mint}>Mint</button>
+    <button className="Rectangle-460" onClick={mint}>Mint</button>
   </div>
 );
 }

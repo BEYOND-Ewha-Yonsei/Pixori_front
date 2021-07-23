@@ -233,7 +233,7 @@
   .login{
     position: relative;
     left: 1200px;
-    top: 100px;
+    top: 150px;
     width: 185px;
     height: 55px;
     flex-grow: 0;
@@ -265,8 +265,8 @@
     text-align: center;
     color: #ffffff;
     position: relative;
-    left: 1200px;
-    top: 100px;
+    left: 1170px;
+    top: 150px;
     width: 185px;
     height: 55px;
     flex-grow: 0;
@@ -333,4 +333,13 @@
     letter-spacing: normal;
     text-align: left;
     color: #846cff;
+  }
+  .profileicon{
+
+
+    position: relative;
+    left: 1800px;
+    top: 90px;
+
+
   }

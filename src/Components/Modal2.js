@@ -3,11 +3,13 @@ import React,{useState} from 'react';
 import { Button } from '@material-ui/core';
 import {useCurrentUser} from "../hooks/current-user"
 import {MintCluster} from '../clusters/mint-cluster'
-
+import {InitCluster} from "../clusters/init-cluster"
+import {ProfileCluster} from '../clusters/profile-cluster'
+import {CurrentUserSubscription} from "../hooks/current-user"
 const Modal2 = ( props ) => {
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const cu = useCurrentUser();
-    const { open, close, header ,arr } = props;
+    const { open, close, header, address} = props;
 
     const [nftName, setNftName] = useState("initial value")
     function set() {
@@ -24,6 +26,10 @@ const Modal2 = ( props ) => {
                         <button className="close" onClick={close}> &times; </button>
                     </header>
                     <main>
+                        <CurrentUserSubscription />
+                        <InitCluster address={address}/>
+                        <ProfileCluster address={address}/>
+
                         
                     </main>
                     <footer>

@@ -34,17 +34,13 @@ const closeModal = () => {
     <Button  onClick={openModal} className="profileicon" >
     <img src={profileicon} ></img>
    </Button>
-   <Modal2 open={ modalOpen } close={ closeModal } header="" >
+   <Modal2 open={ modalOpen } close={ closeModal } header="" address={cu.addr}  >
       </Modal2></div>
   )
 }
 
-function Profile() {
-  const cu = useCurrentUser()
-  return (
-    <ProfileCluster address={cu.addr} />
-  )
-}
+
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -52,7 +48,7 @@ ReactDOM.render(
       <AuthCluster className="auth"/>
       <CurrentUserSubscription />
       <Init />
-      <Profile />
+ 
       <App />
     </RecoilRoot>
   </React.StrictMode>, document.getElementById('root'));
