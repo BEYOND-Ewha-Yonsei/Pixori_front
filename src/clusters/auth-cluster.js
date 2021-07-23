@@ -8,8 +8,7 @@ function WithAuth() {
 
   return !cu.loggedIn ? null : (
     <div>
-      <span>{cu.addr ?? "No Address"}</span>
-      <button className ="login" onClick={cu.logOut}>Log out</button>
+      <button className ="logout" onClick={cu.logOut}>Log out</button>
     </div>
   )
 }
