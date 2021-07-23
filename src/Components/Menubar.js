@@ -40,7 +40,7 @@ export default withRouter(({location:{pathname}})=>(
 
     <Item current={pathname === "/"}><SLink to="/" className="Drawing">Main</SLink></Item>
     <Item current={pathname === "/maker"}><SLink to="/maker" className="Drawing" >Drawing</SLink></Item>
-    <Item current={pathname === "/collection"}><SLink to="/collection" className="collection1" >collection</SLink></Item>
+    <Item current={pathname === "/collection"}><SLink to="/collection" className="collection1" >Marketplace</SLink></Item>
 
     <Item current={pathname === "/collection2"}><SLink to="/collection2" className="collection2">collection2</SLink></Item>
     

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-// import "../styles/modal2.css";
+import "../styles/smodal.css";
 import { Button } from '@material-ui/core';
 import {useCurrentUser} from "../hooks/current-user"
 import {MintCluster} from '../clusters/mint-cluster'
@@ -18,7 +18,7 @@ const Modal2 = ( props ) => {
       }
     return (
         // 모달이 열릴때 openModal 클래스가 생성된다.
-        <div className={ open ? 'openModal modal' : 'modal' }>
+        <div className={ open ? 'openModal modal2' : 'modal2' }>
             { open ? (  
                 <section>
                     <header>
