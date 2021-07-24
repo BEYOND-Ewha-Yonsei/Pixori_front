@@ -28,15 +28,19 @@ const closeModal = () => {
   const cu = useCurrentUser()
 
 
-  return (
-    <div>
+  if (cu.addr) {
+    return (
+      <div>
+        <Button  onClick={openModal} className="profileicon" >
+          <img src={profileicon} ></img>
+        </Button>
+        <Modal2 open={ modalOpen } close={ closeModal } header="" address={cu.addr}  ></Modal2>
+      </div>
+    )
+  } else {
+    return (null)
+  }
 
-    <Button  onClick={openModal} className="profileicon" >
-    <img src={profileicon} ></img>
-   </Button>
-   <Modal2 open={ modalOpen } close={ closeModal } header="" address={cu.addr}  >
-      </Modal2></div>
-  )
 }
 
 
