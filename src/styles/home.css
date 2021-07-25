@@ -213,7 +213,11 @@
 .login {
   position: relative;
   left: 1200px;
+<<<<<<< HEAD
   top: -30px;
+=======
+  top: 110px;
+>>>>>>> b1edf8cc5319c10ce29f22e3c9c294e869367684
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -265,7 +269,11 @@
   color: #ffffff;
   position: relative;
   left: 1170px;
+<<<<<<< HEAD
   top: -30px;
+=======
+  top: 110px;
+>>>>>>> b1edf8cc5319c10ce29f22e3c9c294e869367684
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -358,7 +366,7 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
+  color: #846cff;
   position: relative;
   width: 170px;
   height: 40px;
