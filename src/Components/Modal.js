@@ -14,9 +14,32 @@ const Modal = ( props ) => {
         setNftName(document.getElementById("input").value)
         console.log(nftName)
       }
-    return (
-        // 모달이 열릴때 openModal 클래스가 생성된다.
-        <div className={ open ? 'openModal modal' : 'modal' }>
+      if (cu.addr){
+        return (
+            // 모달이 열릴때 openModal 클래스가 생성된다.
+            <div className={ open ? 'openModal modal' : 'modal' }>
+                { open ? (  
+                    <section>
+                        <header>
+                            {header}
+                            <button className="close" onClick={close}> &times; </button>
+                        </header>
+                        <main>
+                            <div>
+                           <div className="input ">NFT Name</div>
+                           <input className="input2" type="text" id="input" onChange={set}></input>
+                           <MintCluster name={nftName} array={colorArray} address={cu.addr}/>
+                           </div>
+                        </main>
+                        <footer>
+                        </footer>
+                    </section>
+                ) : null }
+            </div>
+        )
+      } else {
+          return (
+            <div className={ open ? 'openModal modal' : 'modal' }>
             { open ? (  
                 <section>
                     <header>
@@ -24,19 +47,16 @@ const Modal = ( props ) => {
                         <button className="close" onClick={close}> &times; </button>
                     </header>
                     <main>
-                        <div>
-                       <div className="input ">NFT Name</div>
-                       <input className="input2" type="text" id="input" onChange={set}></input>
-                       <MintCluster name={nftName} array={colorArray} address={cu.addr}/>
-                       </div>
+                        <p>Login first!</p>
+                         You can mint NFTs after logging in.
                     </main>
                     <footer>
-               
-                    
                     </footer>
                 </section>
             ) : null }
         </div>
-    )
+          )
+      }
+
 }
 export default Modal

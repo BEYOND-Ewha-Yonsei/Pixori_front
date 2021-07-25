@@ -16,25 +16,48 @@ const Modal2 = ( props ) => {
         setNftName(document.getElementById("input").value)
         console.log(nftName)
       }
-    return (
-        // 모달이 열릴때 openModal 클래스가 생성된다.
-        <div className={ open ? 'openModal modal2' : 'modal2' }>
-            { open ? (  
-                <section>
-                    <header>
-                        {header}
-                        <button className="close" onClick={close}> &times; </button>
-                    </header>
-                    <main>
-                        <CurrentUserSubscription />
-                        <ProfileCluster address={address}/>
-                        <InitCluster address={address}/>
-                    </main>
-                    <footer>
-                    </footer>
-                </section>
-            ) : null }
-        </div>
-    )
+
+    if (cu.addr) {
+        return (
+            // 모달이 열릴때 openModal 클래스가 생성된다.
+            <div className={ open ? 'openModal modal2' : 'modal2' }>
+                { open ? (  
+                    <section>
+                        <header>
+                            {header}
+                            <button className="close" onClick={close}> &times; </button>
+                        </header>
+                        <main>
+                            <CurrentUserSubscription />
+                            <ProfileCluster address={address}/>
+                            <InitCluster address={address}/>
+                        </main>
+                        <footer>
+                        </footer>
+                    </section>
+                ) : null }
+            </div>
+        )
+    } else {
+        return (
+            <div className={ open ? 'openModal modal2' : 'modal2' }>
+                { open ? (  
+                    <section>
+                        <header>
+                            {header}
+                            <button className="close" onClick={close}> &times; </button>
+                        </header>
+                        <main>
+                            <p>Login first!</p>
+                             You can view your collection after logging in.
+                        </main>
+                        <footer>
+                        </footer>
+                    </section>
+                ) : null }
+            </div> 
+        )
+    }
+    
 }
 export default Modal2
