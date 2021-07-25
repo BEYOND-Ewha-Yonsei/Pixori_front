@@ -9,11 +9,14 @@
 }
 
 .gnb_bg {
+  position:relative;
+  top:0px;
   width: 1920px;
-  height: 150px;
+  height: 210px;
   flex-grow: 0;
   padding: 40px 330px 38px 72px;
   background-color: #f5f7fa;
+  display: opacity;
 }
 
 .logo {
@@ -210,7 +213,7 @@
 .login {
   position: relative;
   left: 1200px;
-  top: 150px;
+  top: -30px;
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -231,7 +234,7 @@
 .logout {
   position: relative;
   left: 1300px;
-  top: 150px;
+  top: -30px;
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -262,7 +265,7 @@
   color: #ffffff;
   position: relative;
   left: 1170px;
-  top: 150px;
+  top: -30px;
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -331,7 +334,7 @@
 .profileicon {
   position: relative;
   left: 1800px;
-  top: 90px;
+  top: -90px;
 }
 .profileCluster {
   color: #846cff;
