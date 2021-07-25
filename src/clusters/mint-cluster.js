@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
 import { SHA3 } from 'sha3';
@@ -61,18 +61,23 @@ async function handleTransaction(description: string, args: any) {
     console.log('-->', transaction.transactionId);
     await fcl.tx(transaction).onceSealed();
     console.log('OK');
+    const message = "Check your Tx"
+    const link = message.link(`https://flow-view-source.com/testnet/tx/${transaction.transactionId}`)
+    return `Success! ${link}`
   } catch (e) {
     console.log('KO : ', e);
+    return e
   }
 }
 
 export function MintCluster({name, array, address}){
+  const [ modalOpen, setModalOpen ] = useState(false);
 async function mint() {
   console.log('Ping...');
   await fcl.send([fcl.ping()]);
   console.log('OK');
 
-  await handleTransaction('Sending transaction...', [
+  const result = await handleTransaction('Sending transaction...', [
       fcl.transaction`
       import Monday from 0xdb16a5e14c410280
 
@@ -118,7 +123,40 @@ async function mint() {
     ]),
     fcl.limit(100),
   ]);
+  console.log(result);
+  // alert 버전
+  alert(result)
 
+  /* modal 버전
+  const openModal = () => {
+      setModalOpen(true);
+  }
+  const closeModal = () => {
+      setModalOpen(false);
+  }
+  const header=""
+  const Modal = () => {
+    return (
+      <div className={ modalOpen ? 'openModal modal' : 'modal' }>
+      { modalOpen ? (  
+          <section>
+              <header>
+                  {header}
+                  <button className="close" onClick={closeModal}> &times; </button>
+              </header>
+              <main>
+                {result}
+              </main>
+              <footer>
+              </footer>
+          </section>
+      ) : null }
+  </div>
+    )
+  }
+  openModal();
+  Modal();
+  */
 }
 return (
   <div>
