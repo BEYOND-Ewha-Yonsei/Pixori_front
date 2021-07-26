@@ -10,6 +10,22 @@ const Modal = ( props ) => {
     const { open, close, header ,arr } = props;
     const colorArray = arr.toString();
     const [nftName, setNftName] = useState("initial value")
+    
+    // 그림을 IPFS로부터 가져옴
+    const getIPFS = () => {
+        const ipfsApi = require('ipfs-api');
+	    const ipfs = ipfsApi('ipfs.infura.io', 5001, {protocol : "https"})
+	    console.log(ipfs);
+		
+	    const cidIPFS = 'QmPJCxpLALHfkXzxvYX6vK6H6rFKjKWZMG1vtg3z4VZRzS';
+		
+	    ipfs.files.get(cidIPFS, (err, result) => { // Download buffer from IPFS
+		
+		    var	imgFile = result[0].content.toString('utf8');
+		    console.log(imgFile);
+	    });
+  	};
+    
     function set() {
         setNftName(document.getElementById("input").value)
         console.log(nftName)
@@ -25,8 +41,9 @@ const Modal = ( props ) => {
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <div>
+                           <div>
                            <div className="input ">NFT Name</div>
+                           <button onClick={ getIPFS }> getPic </button>
                            <input className="input2" type="text" id="input" onChange={set}></input>
                            <MintCluster name={nftName} array={colorArray} address={cu.addr}/>
                            </div>

@@ -328,6 +328,37 @@ const Home = () => {
   //store playHeadComponent in a variable for readability
   const playHeadComponent = playHead();
 
+  // Extract an image
+  const createPNG = (e) => {
+  	
+    html2canvas(e.target.parentElement).then(function(canvas) {
+  	  
+      var myImg = canvas.toDataURL("image/png");
+      var pngBuffer = Buffer(myImg);
+  	  
+      const ipfsApi = require('ipfs-api');
+      const ipfs = ipfsApi('ipfs.infura.io', 5001, {protocol : "https"})
+	  
+      ipfs.files.add(pngBuffer, (err, result) => { // Upload buffer to IPFS
+      	
+      	if(err) {
+      	  return "error";
+        }
+        
+        let url = `https://ipfs.io/ipfs/${result[0].hash}`
+        console.log(url);
+      
+      });
+    });
+  }
+  
+  // Function when clicking 'Mint!'
+  const create = (e) => {
+    openModal();
+    createPNG(e);
+  }
+  
+
   //App returns the composite of our beat machine and components
   return (
     <Fragment>
@@ -354,7 +385,7 @@ const Home = () => {
    <div className="mint">
     <Button
     style={{ background: "ffffff", padding: '27px' }}
-    onClick={openModal}>Mint!
+    onClick={ create }>Mint!
       </Button>
      
       <Modal open={ modalOpen } close={ closeModal } header="" arr={arr1}>
