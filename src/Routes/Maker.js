@@ -153,7 +153,7 @@ const Home = () => {
     clonedObj[column] = toggle;
     //temporary const for setGrid
     const arrayToPassSetGrid = [];
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 16; i++) {
       if (row === i) {
         arrayToPassSetGrid.push(clonedObj);
       } else {
@@ -182,7 +182,7 @@ const Home = () => {
   //Iterate through the array of collected sounds compiled from our grid in loop()
   const playSounds = (array) => {
 
-    for (let i = 0; i < 31; i++) {
+    for (let i = 0; i < 32; i++) {
       playSound(array[i]);
 
     }
@@ -194,7 +194,7 @@ const Home = () => {
     //create an array to hold our sounds for a beat
     let soundArr = [];
     //loop through each instrument in our column
-    for (let j = 0; j < 15; j++) {
+    for (let j = 0; j < 16; j++) {
       //if the square is active e.g. 0,0
       if (grid[j][counter]) {
         //set a temporary variable to hold our soundSrc
@@ -217,7 +217,7 @@ const Home = () => {
         // create an array of up to 6 sounds that are then played at the same time
         loop();
         // increments counter based on current tempo
-        if (counter < 31) {
+        if (counter < 32) {
           setCounter((prevState) => ++prevState);
         } else {
           setCounter(0);
