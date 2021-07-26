@@ -331,15 +331,15 @@ const Home = () => {
   // Extract an image
   const createPNG = (e) => {
   	
-  	html2canvas(e.target.parentElement).then(function(canvas) {
+    html2canvas(e.target.parentElement).then(function(canvas) {
   	  
-  	  var myImg = canvas.toDataURL("image/png");
-  	  var pngBuffer = Buffer(myImg);
+      var myImg = canvas.toDataURL("image/png");
+      var pngBuffer = Buffer(myImg);
   	  
-  	  const ipfsApi = require('ipfs-api');
-	    const ipfs = ipfsApi('ipfs.infura.io', 5001, {protocol : "https"})
+      const ipfsApi = require('ipfs-api');
+      const ipfs = ipfsApi('ipfs.infura.io', 5001, {protocol : "https"})
 	  
-	    ipfs.files.add(pngBuffer, (err, result) => { // Upload buffer to IPFS
+      ipfs.files.add(pngBuffer, (err, result) => { // Upload buffer to IPFS
       	
       	if(err) {
       	  return "error";
@@ -349,13 +349,13 @@ const Home = () => {
         console.log(url);
       
       });
-  	});
+    });
   }
   
   // Function when clicking 'Mint!'
   const create = (e) => {
-  	openModal();
-  	createPNG(e);
+    openModal();
+    createPNG(e);
   }
   
 
