@@ -6,7 +6,11 @@ import {MintCluster} from '../clusters/mint-cluster'
 import {InitCluster} from "../clusters/init-cluster"
 import {ProfileCluster} from '../clusters/profile-cluster'
 import {CurrentUserSubscription} from "../hooks/current-user"
+import {Link,withRouter} from "react-router-dom";
+
 const Modal2 = ( props ) => {
+
+  
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const cu = useCurrentUser();
     const { open, close, header, address} = props;
@@ -31,6 +35,8 @@ const Modal2 = ( props ) => {
                             <CurrentUserSubscription />
                             <ProfileCluster address={address}/>
                             <InitCluster address={address}/>
+
+                            <Link to="/profile" className="myprofile">edit profile</Link>
                         </main>
                         <footer>
                         </footer>

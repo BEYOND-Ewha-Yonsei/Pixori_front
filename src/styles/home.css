@@ -389,3 +389,28 @@
   border: solid 1px #846cff;
   background-color: #846cff;
 }
+.editprofile
+{ width: 248px;
+  height: 48px;
+  flex-grow: 0;
+  margin: 0 0 33px;
+  padding: 8px 16px 6px 15px;
+  border: solid 1px #846cff;
+  background-color: #ffffff;
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 18px;
+  color: #3e4c59;
+
+
+}
+
+.editbutton
+{ 
+  flex-grow: 0;
+  font-family: SpaceMono;
+  font-size: 18px;
+  color: #3e4c59;
+
+
+}

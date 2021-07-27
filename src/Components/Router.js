@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Redirect,Route,Switch} from "react-router-dom";
 import Home from "../Routes/Home";
 import Collection from "../Routes/Collection"
 import Collections from "../Routes/Collections"
+import Editprofile from "../Routes/Editprofile"
 import Maker from "../Routes/Maker";
 import Menubar from "./Menubar";
 import Footer from "./Footer";
@@ -60,6 +61,7 @@ export default ()=>(
         <Route path="/maker" component={Maker} />
         <Route path="/collection" component={Collection} />
         <Route path="/collection2" component={Collections} />
+        <Route path="/profile" component={Editprofile} />
         <Redirect from="*" to="/" />
         <Footer/>
       </Switch>
