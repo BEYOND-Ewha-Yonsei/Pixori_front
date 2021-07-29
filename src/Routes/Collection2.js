@@ -126,36 +126,22 @@ export default (arr1) => {
      }
 
     
-for(let j=0; j<16;j++)
-{
-      for (let i = 32*j ; i < 32+32*j ; i++) {
+     for(let j=0; j<16;j++)
      {
-       if( arr4[i][0]=="#")
-
-         {   grid[parseInt(i/32)][i%32]=true;
-
-        }
-      }
-    
+           for (let i = 32*j ; i < 32+32*j ; i++) {
+          {
+     
+              {   grid[0][i]=true;
+            if( arr3[i][0]=="#")
+     
+              {   grid[parseInt(i/32)][i%32]=true;
+     
+             }
+           }
+     
+         }
+     }
     }
-}
-
-// for(let j=0; j<31;j++)
-// {
-//       for (let i = j+15*j ; i < 15+15*j+j ; i++) {
-//      {
-//        if( arr4[i][0]=="#")
-//          {   grid[0][i]=true;
-
-//         }
-//       }
-    
-//     }
-// }
-
-
-  console.log(grid)
-
      
   return (
     <div>
