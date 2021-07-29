@@ -40,12 +40,7 @@ export function TokenCluster2({addresss, address}) {
                 colorArr[k] = nftInfo[k].color
               return (
                 <p>
-                  <Collection2 arr1={colorArr[k]} />
- @kwklly
-kwklly 2 days ago Author Owner
-블록체인에서 받아온 배열을 arr1에 매핑
-
-@kwklly	Reply…
+                  NFT #{k}: {nftInfo[k].name} <Collection2 arr1={colorArr[k]} />
                 </p>
               )
             })
