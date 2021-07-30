@@ -30,7 +30,9 @@ import {MintCluster} from '../clusters/mint-cluster'
 import playbutton from "../img/btn_play_circle_purple.png"
 import stopbutton from "../img/btn_stop_circle_purple.png"
 import bpmbutton from "../img/btn_tempo_circle_purple.png"
+import reload from "../img/btn_reset_circle_purple.svg"
 import Footer from "../Components/Footer.js"
+import {Link,withRouter} from "react-router-dom";
 const arr1= Array.from(Array(16), () => new Array(32).fill(0));
 
 const Home = () => {
@@ -357,7 +359,13 @@ const Home = () => {
     openModal();
     createPNG(e);
   }
-  
+
+  const reloadd = () => {
+    window.loation = window.loacation
+    window.location.reload();
+
+  }
+  // window.location = window.location;
 
   //App returns the composite of our beat machine and components
   return (
@@ -393,11 +401,9 @@ const Home = () => {
       </div>
    
       <br />
- 
-  
-<div className="volTempo">
 
-<button onClick="window.location.reload()">새로고침</button>
+<div className="volTempo">
+<Button onClick={reloadd}><img className="reloadicon" src ={reload}/></Button>
 <Tempo   value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
   <img className="volTempo2" src={bpmbutton}></img>
 </Tempo>

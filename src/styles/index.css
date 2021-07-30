@@ -184,3 +184,11 @@ td.instrument {
 
 }
 
+.reloadicon {
+
+  
+  object-fit: contain;
+  position:relative;
+  top: 70px;
+  left:-70px;
+}

@@ -10,7 +10,7 @@
 
 .gnb_bg {
   position:relative;
-  top:0px;
+  top:-50px;
   width: 1920px;
   height: 210px;
   flex-grow: 0;
@@ -214,7 +214,7 @@
   position: relative;
   left: 1200px;
 
-  top: -30px;
+  top: -70px;
 
   width: 185px;
   height: 55px;
@@ -236,7 +236,7 @@
 .logout {
   position: relative;
   left: 1300px;
-  top: -30px;
+  top: -70px;
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -267,7 +267,7 @@
   color: #ffffff;
   position: relative;
   left: 1170px;
-  top: -30px;
+  top: -70px;
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -336,7 +336,7 @@
 .profileicon {
   position: relative;
   left: 1800px;
-  top: -90px;
+  top: -130px;
 }
 .profileCluster {
   color: #846cff;
