@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
 import Collection2 from "../Routes/Collection2"
-
+import "../styles/market.css"
+import playbutton from "../img/btn_play_circle_purple.png"
 export function TokenCluster2({addresss, address}) {
   const [nftInfo, setNftInfo] = useState(null)
   const fetchTokenData = async () => {
@@ -35,13 +36,14 @@ export function TokenCluster2({addresss, address}) {
     <div>
       {
         nftInfo &&
-        <div>
+        <div className="">
             {Object.keys(nftInfo).map(k => {
                 colorArr[k] = nftInfo[k].color
               return (
-                <p>
-                  NFT #{k}: {nftInfo[k].name} <Collection2 arr1={colorArr[k]} />
-                </p>
+                <div className="card_marketplace" >
+                <p className="NftName">
+                  NFT Name: {nftInfo[k].name} <br/> # :{k}  </p>  <Collection2 arr1={colorArr[k]} />
+                </div>
               )
             })
             }

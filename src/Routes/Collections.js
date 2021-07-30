@@ -2,7 +2,8 @@ import {TokenCluster2} from '../clusters/token-cluster2'
 import {useCurrentUser} from '../hooks/current-user'
 import React from 'react'
 import {ErrorTokenCluster} from '../clusters/error-token-cluster'
-
+import "../styles/market.css"
+import { Fragment } from 'react'
 export default () => {
 
 function Token() {
@@ -14,6 +15,7 @@ function Token() {
     } 
     else {
       return (
+
         <ErrorTokenCluster />
       )
     }

@@ -6,6 +6,7 @@ import Bpm from '../helpers/useBPM';
 import PlayButton from '../Components/PlayButton';
 import { instruments } from '../helpers/instruments';
 import StopButton from '../Components/StopButton';
+import "../styles/market.css"
 export default (arr1) => {
   
  
@@ -145,9 +146,9 @@ export default (arr1) => {
      
   return (
     <div>
-      <PlayButton onClick={togglePlay} isPlaying={isPlaying} />
-      <StopButton onClick={togglePlay} isPlaying={isPlaying} />
-
+     
+      <PlayButton onClick={togglePlay} isPlaying={isPlaying} /> <StopButton onClick={togglePlay} isPlaying={isPlaying} />
+  
       
     </div>
   );

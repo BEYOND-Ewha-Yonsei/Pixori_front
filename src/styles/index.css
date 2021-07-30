@@ -192,3 +192,10 @@ td.instrument {
   top: 70px;
   left:-70px;
 }
+.stopbutton {
+
+position: relative;
+top:-90px;
+left:100px
+
+}
