@@ -7,10 +7,9 @@
   padding: 40px 330px 38px 72px;
   background-color: #f5f7fa;
 }
-
 .gnb_bg {
-  position:relative;
-  top:-50px;
+  position: relative;
+  top: -50px;
   width: 1920px;
   height: 210px;
   flex-grow: 0;
@@ -18,14 +17,12 @@
   background-color: #f5f7fa;
   display: opacity;
 }
-
 .logo {
   width: 108px;
   height: 28px;
   margin: 6px 107px 0 162px;
   padding: 0 0 0px;
 }
-
 .Vector1 {
   width: 8.2px;
   height: 20.3px;
@@ -71,7 +68,6 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-
   text-align: left;
   color: #ffffff;
 }
@@ -116,7 +112,6 @@
 .grid {
   width: 1920px;
   height: 503px;
-
   border-style: solid;
   border-width: 1px;
   border-image-source: linear-gradient(to top, #70f6f3, #846cff);
@@ -213,9 +208,7 @@
 .login {
   position: relative;
   left: 1200px;
-
   top: -70px;
-
   width: 185px;
   height: 55px;
   flex-grow: 0;
@@ -284,7 +277,6 @@
   border: solid 1px #846cff;
   background-color: #70f6f3;
   position: relative;
-
   font-family: SpaceMono;
   font-size: 28px;
   font-weight: bold;
@@ -343,7 +335,6 @@
   font-family: SpaceMono;
   font-size: 16px;
 }
-
 .initCluster {
   color: #846cff;
   font-family: SpaceMono;
@@ -389,8 +380,8 @@
   border: solid 1px #846cff;
   background-color: #846cff;
 }
-.editprofile
-{ width: 248px;
+.editprofile {
+  width: 248px;
   height: 48px;
   flex-grow: 0;
   margin: 0 0 33px;
@@ -401,16 +392,10 @@
   font-family: SpaceMono;
   font-size: 18px;
   color: #3e4c59;
-
-
 }
-
-.editbutton
-{ 
+.editbutton {
   flex-grow: 0;
   font-family: SpaceMono;
   font-size: 18px;
   color: #3e4c59;
-
-
 }

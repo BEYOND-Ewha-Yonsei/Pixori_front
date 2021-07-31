@@ -9,15 +9,16 @@ export default (arr1) => {
   const arr2 = Object.values(arr1).toString()
   const arr3 = arr2.split(",")
   const [isPlaying, setIsPlaying] = useState(false);
-  const [squares, setSquares] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]);
+  const squares =[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
+  // eslint-disable-next-line no-unused-vars
   const [playHeadArray, setPlayHeadArray] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]);
   const togglePlay = () => {
     setIsPlaying(!isPlaying);
   };
   const [counter, setCounter] = useState(0);
-  const [tempo, setTempo] = useState(120);
+  const tempo = 120;
   let beats = Bpm(tempo);
-  const [grid, setGrid] = useState([
+  const grid = [
     instruments[0].pattern,
     instruments[1].pattern,
     instruments[2].pattern,
@@ -34,7 +35,7 @@ export default (arr1) => {
     instruments[13].pattern,
     instruments[14].pattern,
     instruments[15].pattern,
-  ]);
+  ];
   const playSound = (source) => {
     var sound = new Howl({
       src: [source],
@@ -72,6 +73,7 @@ export default (arr1) => {
       return () => clearInterval(interval);
     }
     resetSquares();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, beats, counter]);
 
   const resetSquares = () => {
