@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+/* eslint-disable jsx-a11y/alt-text */
+import React from 'react';
 import '../styles/index.css';
 import bpmbutton from "../img/btn_tempo_circle_purple.png"
-const Tempo = (props) => {
 
+const Tempo = (props) => {
   return (
     <div>
       <img src={bpmbutton}></img>
@@ -16,7 +17,6 @@ const Tempo = (props) => {
         onChange={props.onTempoChange}
       />
     </div>
-
   )
 }
 

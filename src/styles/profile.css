@@ -1,39 +1,38 @@
 .edityourprofile {
-    position: relative;
-    top :40px;
-    width: 680px;
-    height: 80px;
-    margin: 34px 910px 14px 330px;
-    font-family: SpaceMono;
-    font-size: 40px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #846cff;
-  }
-
-  .Rectangle-1013 {
-    width: 1262px;
-    height: 328px;
-    margin: 14px 330px 332px 328px;
-    padding: 24px 107px 72px 80px;
-    border: solid 1px #846cff;
-    background-color: #ffffff;
-  }
-  .User-ID {
-    width: 429px;
-    height: 40px;
-    margin: 0 79px 8px 110px;
-    font-family: SpaceMono;
-    font-size: 24px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #846cff;
-  }
+  position: relative;
+  top: 40px;
+  width: 680px;
+  height: 80px;
+  margin: 34px 910px 14px 330px;
+  font-family: SpaceMono;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #846cff;
+}
+.Rectangle-1013 {
+  width: 1262px;
+  height: 328px;
+  margin: 14px 330px 332px 328px;
+  padding: 24px 107px 72px 80px;
+  border: solid 1px #846cff;
+  background-color: #ffffff;
+}
+.User-ID {
+  width: 429px;
+  height: 40px;
+  margin: 0 79px 8px 110px;
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #846cff;
+}

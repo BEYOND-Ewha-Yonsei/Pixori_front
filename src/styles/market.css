@@ -1,23 +1,18 @@
 .card_marketplace {
-    width: 400px;
-    height: 172px;
-    margin: 63px 30px 60px 330px;
-    object-fit: contain;
-    border: solid 1px #846cff;
-
-
+  width: 400px;
+  height: 172px;
+  margin: 63px 30px 60px 330px;
+  object-fit: contain;
+  border: solid 1px #846cff;
 }
-.NftName{
-
-
-    font-family: SpaceMono;
-    font-size: 24px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #846cff;
-
+.NftName {
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #846cff;
 }

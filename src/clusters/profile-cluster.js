@@ -33,6 +33,7 @@ export function ProfileCluster({address}) {
       profile.refetch();
     }
     refetch();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]) 
 
 

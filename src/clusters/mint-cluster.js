@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import * as fcl from "@onflow/fcl";
 import * as t from "@onflow/types"
 import { SHA3 } from 'sha3';
 import * as Elliptic from 'elliptic';
 import "../styles/modal.css";
+
 const ec = new Elliptic.ec('p256');
 
 function hashMsgHex(msgHex) {
@@ -70,14 +71,14 @@ async function handleTransaction(description: string, args: any) {
   }
 }
 
-export function MintCluster({name, array, address}){
-  const [ modalOpen, setModalOpen ] = useState(false);
-async function mint() {
-  console.log('Ping...');
-  await fcl.send([fcl.ping()]);
-  console.log('OK');
+export function MintCluster({ name, array, address }) {
+  // const [ modalOpen, setModalOpen ] = useState(false);
+  async function mint() {
+    console.log('Ping...');
+    await fcl.send([fcl.ping()]);
+    console.log('OK');
 
-  const result = await handleTransaction('Sending transaction...', [
+    const result = await handleTransaction('Sending transaction...', [
       fcl.transaction`
       import Monday from 0xdb16a5e14c410280
 
@@ -105,62 +106,62 @@ async function mint() {
           }
       }
     `,
-    fcl.payer(buildAuthorization(admin)),
-    fcl.proposer(buildAuthorization(admin)),
-    fcl.authorizations([buildAuthorization(admin)]),
-    fcl.args([
-      fcl.arg(
-      [
-        {key: "name", value: name},
-        {key: "color", value: array},
-      ],  
-      t.Dictionary([
-        {key: t.String, value: t.String},
-        {key: t.String, value: t.String},
-      ])
-      ),
-      fcl.arg(address, t.String) 
-    ]),
-    fcl.limit(100),
-  ]);
-  console.log(result);
-  // alert 버전
-  alert(result)
+      fcl.payer(buildAuthorization(admin)),
+      fcl.proposer(buildAuthorization(admin)),
+      fcl.authorizations([buildAuthorization(admin)]),
+      fcl.args([
+        fcl.arg(
+          [
+            { key: "name", value: name },
+            { key: "color", value: array },
+          ],
+          t.Dictionary([
+            { key: t.String, value: t.String },
+            { key: t.String, value: t.String },
+          ])
+        ),
+        fcl.arg(address, t.String)
+      ]),
+      fcl.limit(100),
+    ]);
+    console.log(result);
+    // alert 버전
+    alert(result)
 
-  /* modal 버전
-  const openModal = () => {
-      setModalOpen(true);
+    /* modal 버전
+    const openModal = () => {
+        setModalOpen(true);
+    }
+    const closeModal = () => {
+        setModalOpen(false);
+    }
+    const header=""
+    const Modal = () => {
+      return (
+        <div className={ modalOpen ? 'openModal modal' : 'modal' }>
+        { modalOpen ? (  
+            <section>
+                <header>
+                    {header}
+                    <button className="close" onClick={closeModal}> &times; </button>
+                </header>
+                <main>
+                  {result}
+                </main>
+                <footer>
+                </footer>
+            </section>
+        ) : null }
+    </div>
+      )
+    }
+    openModal();
+    Modal();
+    */
   }
-  const closeModal = () => {
-      setModalOpen(false);
-  }
-  const header=""
-  const Modal = () => {
-    return (
-      <div className={ modalOpen ? 'openModal modal' : 'modal' }>
-      { modalOpen ? (  
-          <section>
-              <header>
-                  {header}
-                  <button className="close" onClick={closeModal}> &times; </button>
-              </header>
-              <main>
-                {result}
-              </main>
-              <footer>
-              </footer>
-          </section>
-      ) : null }
-  </div>
-    )
-  }
-  openModal();
-  Modal();
-  */
-}
-return (
-  <div>
-    <button className="Rectangle-460" onClick={mint}>Mint</button>
-  </div>
-);
+  return (
+    <div>
+      <button className="Rectangle-460" onClick={mint}>Mint</button>
+    </div>
+  );
 }

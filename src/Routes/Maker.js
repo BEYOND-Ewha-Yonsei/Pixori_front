@@ -1,79 +1,45 @@
-// import React from 'react'
-
-// function Maker() {
-//     return (
-//         <div>
-//             hi
-//         </div>
-//     )
-// }
-
-// export default Maker
-import React, { useEffect, useState ,useMemo, useRef} from 'react';
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useEffect, useState, useRef, Fragment } from 'react';
 import { Button } from '@material-ui/core';
+import { Howl } from 'howler';
 import html2canvas from 'html2canvas';
-import '../styles/index.css';
-import '../styles/playhead.css';
-import BeatMachine from '../Components/BeatMachine';
 import InstrumentRow from '../Components/InstrumentRow';
-import Bpm from '../helpers/useBPM';
 import Modal from '../Components/Modal';
 import Tempo from '../Components/Tempo';
-import { instruments } from '../helpers/instruments';
-
-import { Howl } from 'howler';
-import useStyles from '../App.styles';
-import { Fragment } from 'react';
-import { exportComponentAsPNG } from "react-component-export-image"
 import ColorPicker from '../Components/ColorPicker.js';
-import {MintCluster} from '../clusters/mint-cluster'
+import Footer from "../Components/Footer.js"
+import { instruments } from '../helpers/instruments';
+import Bpm from '../helpers/useBPM';
+import '../styles/index.css';
+import '../styles/playhead.css';
 import playbutton from "../img/btn_play_circle_purple.png"
 import stopbutton from "../img/btn_stop_circle_purple.png"
 import bpmbutton from "../img/btn_tempo_circle_purple.png"
 import reload from "../img/btn_reset_circle_purple.svg"
-import Footer from "../Components/Footer.js"
-import {Link,withRouter} from "react-router-dom";
-const arr1= Array.from(Array(16), () => new Array(32).fill(0));
+
+
+const arr1 = Array.from(Array(16), () => new Array(32).fill(0));
 
 const Home = () => {
-
-
-  
-
-  const [ modalOpen, setModalOpen ] = useState(false);
-
+  const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
-      setModalOpen(true);
+    setModalOpen(true);
   }
   const closeModal = () => {
-      setModalOpen(false);
+    setModalOpen(false);
   }
-
-
-  const myPortalContainer = document.getElementById("portal");
-  const myCanvas = document.querySelector("div#portal canvas");
-
-
   const panelRef = useRef()
-
   const [selectedColor, setColor] = useState("#000000");
 
-
-
-
-
-
-  // function changeColor(color) {
-  //   setColor(color.hex);
-  // }
   //beat machine initial states
   const [isPlaying, setIsPlaying] = useState(false);
   const [tempo, setTempo] = useState(120);
+  const squares = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,];
 
-  const [squares, setSquares] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]);
   // state tracking for our dumb component when !isPlaying
-  const [playHeadArray, setPlayHeadArray] = useState([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]);
+  const [playHeadArray, setPlayHeadArray] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]);
   const [counter, setCounter] = useState(0);
+
   // holds on off state for each row of instruments
   const [grid, setGrid] = useState([
     instruments[0].pattern,
@@ -89,7 +55,7 @@ const Home = () => {
     instruments[10].pattern,
     instruments[11].pattern,
     instruments[12].pattern,
-    instruments[13].pattern,    
+    instruments[13].pattern,
     instruments[14].pattern,
     instruments[15].pattern,
   ]);
@@ -107,9 +73,6 @@ const Home = () => {
     const eventValue = event.target.value;
     setTempo(parseInt(eventValue));
   };
-
-
-
 
   //Animation Specific functions
   //helper function for playHeadLoop()
@@ -149,7 +112,7 @@ const Home = () => {
   };
 
   //handles any changes user makes to instrument grid and updates values accordingly
-  const updateGrid = (row, column, toggle,color) => {
+  const updateGrid = (row, column, toggle, color) => {
     const clonedObj = { ...grid[row] };
     console.log(clonedObj)
     clonedObj[column] = toggle;
@@ -162,8 +125,7 @@ const Home = () => {
         arrayToPassSetGrid.push(grid[i]);
       }
     }
-
-    arr1[row].splice(column,1,color)
+    arr1[row].splice(column, 1, color)
     setGrid(arrayToPassSetGrid);
     console.log(arr1)
     console.log(grid)
@@ -175,7 +137,6 @@ const Home = () => {
     var sound = new Howl({
       src: [source],
       html5: true,
-
     });
     console.log(sound)
     sound.play();
@@ -183,16 +144,13 @@ const Home = () => {
 
   //Iterate through the array of collected sounds compiled from our grid in loop()
   const playSounds = (array) => {
-
     for (let i = 0; i < 32; i++) {
       playSound(array[i]);
-
     }
-
   };
 
   //collate all active sound samples on the current beat into an array from instruments
-  const loop = () => {  
+  const loop = () => {
     //create an array to hold our sounds for a beat
     let soundArr = [];
     //loop through each instrument in our column
@@ -200,8 +158,8 @@ const Home = () => {
       //if the square is active e.g. 0,0
       if (grid[j][counter]) {
         //set a temporary variable to hold our soundSrc
-        let soundSrc =instruments[j].sound;
-            //e.g. "./DrumSamples/ClosedHats/HiHat01.wav"
+        let soundSrc = instruments[j].sound;
+        //e.g. "./DrumSamples/ClosedHats/HiHat01.wav"
         soundArr.push(soundSrc);
       }
       playSounds(soundArr);
@@ -228,17 +186,16 @@ const Home = () => {
       return () => clearInterval(interval);
     }
     resetSquares();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, beats, counter]);
- 
 
   //Map each instrumentRow onto the beat machine
-  const instrumentRows = instruments.map((instrument, row ) => {
+  const instrumentRows = instruments.map((instrument, row) => {
     return (
       <InstrumentRow
-      
         key={row}
         row={row}
-        updateGrid={(row, column, toggle,color) => updateGrid(row, column, toggle,color)}
+        updateGrid={(row, column, toggle, color) => updateGrid(row, column, toggle, color)}
         instrumentName={instrument.name}
         instrumentSound={instrument.sound}
         pattern={instrument.pattern}
@@ -246,7 +203,6 @@ const Home = () => {
       />
     );
   });
-  
 
   //Conditionally Render Playhead if isPlaying
   const playHead = () => {
@@ -288,7 +244,7 @@ const Home = () => {
           <td className="inactive"></td>
           <td className="inactive"></td>
 
-           <td className="inactive"></td>
+          <td className="inactive"></td>
           <td className="inactive"></td>
           <td className="inactive"></td>
           <td className="inactive"></td>
@@ -299,61 +255,32 @@ const Home = () => {
         </>
       );
     }
-
-
-
   };
-  const handleClick = () => {
-    
-    setGrid = [
-      instruments[0].pattern,
-      instruments[1].pattern,
-      instruments[2].pattern,
-      instruments[3].pattern,
-      instruments[4].pattern,
-      instruments[5].pattern,
-      instruments[6].pattern,
-      instruments[7].pattern,
-      instruments[8].pattern,
-      instruments[9].pattern,
-      instruments[10].pattern,
-      instruments[11].pattern,
-      instruments[12].pattern,
-      instruments[13].pattern,    
-      instruments[14].pattern,
-      instruments[15].pattern,
-    ];
-    
-  
-  }
 
   //store playHeadComponent in a variable for readability
   const playHeadComponent = playHead();
 
   // Extract an image
   const createPNG = (e) => {
-  	
-    html2canvas(e.target.parentElement).then(function(canvas) {
-  	  
+    html2canvas(e.target.parentElement).then(function (canvas) {
       var myImg = canvas.toDataURL("image/png");
       var pngBuffer = Buffer(myImg);
-  	  
       const ipfsApi = require('ipfs-api');
-      const ipfs = ipfsApi('ipfs.infura.io', 5001, {protocol : "https"})
-	  
+      const ipfs = ipfsApi('ipfs.infura.io', 5001, { protocol: "https" })
+
       ipfs.files.add(pngBuffer, (err, result) => { // Upload buffer to IPFS
-      	
-      	if(err) {
-      	  return "error";
+
+        if (err) {
+          return "error";
         }
-        
+
         let url = `https://ipfs.io/ipfs/${result[0].hash}`
         console.log(url);
-      
+
       });
     });
   }
-  
+
   // Function when clicking 'Mint!'
   const create = (e) => {
     openModal();
@@ -370,65 +297,48 @@ const Home = () => {
   //App returns the composite of our beat machine and components
   return (
     <Fragment>
-
-    <div className="container">
-      <div className="titleImg">
-
- 
+      <div className="container">
+        <div className="titleImg">
+        </div>
+        <div className="progress_container_purple">
+          <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
+            <img src={playbutton}></img>
+          </Button>
+          <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
+            <img src={stopbutton}></img>
+          </Button>
+        </div>
+        <div className="musicplay">{playHeadComponent}</div>
+        <div className="mint">
+          <Button
+            style={{ background: "ffffff", padding: '27px' }}
+            onClick={create}>Mint!
+          </Button>
+          <Modal open={modalOpen} close={closeModal} header="" arr={arr1}>
+          </Modal>
+        </div>
+        <br />
+        <div className="volTempo">
+          <Button onClick={reloadd}><img className="reloadicon" src={reload} /></Button>
+          <Tempo value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
+            <img className="volTempo2" src={bpmbutton}></img>
+          </Tempo>
+        </div>
+        <div className="colorpick">
+          <ColorPicker color={selectedColor}
+            // onChangeComplete={changeColor} 
+            onSetColor={setColor} />
+        </div>
+        <br />
+        <table border="2" className="tabledgn">
+          <tbody id="table" ref={panelRef}>
+            {instrumentRows}
+          </tbody>
+        </table>
       </div>
-      <div className="progress_container_purple">
-     
-        <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
-          <img src={playbutton}></img>
-        </Button>
-        <Button onClick={togglePlay} isPlaying={isPlaying} className="btn_play_circle_purple" >
-          <img src={stopbutton}></img>
-        </Button>
-
-    
-      
-      
-      </div>
-      <div className="musicplay">{playHeadComponent}</div>
-   <div className="mint">
-    <Button
-    style={{ background: "ffffff", padding: '27px' }}
-    onClick={ create }>Mint!
-      </Button>
-     
-      <Modal open={ modalOpen } close={ closeModal } header="" arr={arr1}>
-      </Modal>
-      </div>
-   
-      <br />
-
-<div className="volTempo">
-<Button onClick={reloadd}><img className="reloadicon" src ={reload}/></Button>
-<Tempo   value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
-  <img className="volTempo2" src={bpmbutton}></img>
-</Tempo>
-</div>
-<div className="colorpick">
-<ColorPicker color={selectedColor} 
-// onChangeComplete={changeColor} 
-onSetColor={setColor} />
-</div>
-
-      <br />
-      <table  border="2" className="tabledgn">
-        <tbody id="table"  ref={panelRef}>
-         
-          {instrumentRows}
-         
-        </tbody>
-      </table>
-    </div>
-    <Footer/>
+      <Footer />
     </Fragment>
   );
-
-
-  
 };
 
 export default Home;
