@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/smodal.css";
 import { useCurrentUser } from "../hooks/current-user"
-import { useProfile } from "../hooks/profile"
+import { fetchProfile } from "../flow/fetch-profile.script"
 
 const Modal2 = (props) => {
-    const cu = useCurrentUser();
-    const profile = useProfile(cu.addr)
     const { open, close, header } = props;
+    const cu = useCurrentUser();
+    const [profile, setProfile] = useState("Your Name")
+
+    useEffect(() => {
+        async function refetch() {
+            await fetchProfile(cu.addr)
+                .then(profile => {
+                    if (profile == null) return profile
+                    return profile
+                })
+                .then(setProfile)
+        }
+        refetch();
+    })
 
     if (cu.addr) {
         return (
@@ -20,7 +32,7 @@ const Modal2 = (props) => {
                         </header>
                         <main>
                             <p className="profileName">{profile.name}</p>
-                            <p style={{marginBottom: 25}}><Link to="/profile" className="editProfile">Edit profile</Link></p> 
+                            <p style={{ marginBottom: 25 }}><Link to="/profile" className="editProfile">Edit profile</Link></p>
                             <p><Link to="/collection2" className="editProfile">My collection</Link></p>
                         </main>
                         <footer>
@@ -39,8 +51,8 @@ const Modal2 = (props) => {
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <p style={{fontSize: 35, fontFamily: 'SpaceMono', marginBottom: 10}}>LOGIN FIRST!</p>
-                            <p style={{fontSize: 20, fontFamily: 'SpaceMono'}}>You can play your collection after logging in.</p>
+                            <p style={{ fontSize: 35, fontFamily: 'SpaceMono', marginBottom: 10 }}>LOGIN FIRST!</p>
+                            <p style={{ fontSize: 20, fontFamily: 'SpaceMono' }}>You can play your collection after logging in.</p>
                         </main>
                         <footer>
                         </footer>
