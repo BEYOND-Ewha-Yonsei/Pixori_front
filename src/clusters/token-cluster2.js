@@ -35,9 +35,10 @@ export function TokenCluster2({ addresss, address }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cu.addr])
 
-
+  // TODO 아무 collection도 없을 때
   return (
     <div>
+      <div className="edityourprofile">My Collection</div>
       {
         nftInfo &&
         <div className="">
