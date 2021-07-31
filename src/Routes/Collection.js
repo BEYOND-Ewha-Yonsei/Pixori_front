@@ -18,7 +18,7 @@ export default () => {
     }
     else {
       return (
-        <ErrorTokenCluster />
+        <div style={{fontSize: 40, fontFamily: 'SpaceMono', margin: '63px 30px 60px 330px'}}> Coming soon!</div>
       )
     }
   }

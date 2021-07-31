@@ -20,7 +20,8 @@ const Modal2 = (props) => {
                         </header>
                         <main>
                             <p className="profileName">{profile.name}</p>
-                            <Link to="/profile" className="editProfile">Edit profile</Link>
+                            <p style={{marginBottom: 25}}><Link to="/profile" className="editProfile">Edit profile</Link></p> 
+                            <p><Link to="/collection2" className="editProfile">My collection</Link></p>
                         </main>
                         <footer>
                         </footer>
@@ -38,8 +39,8 @@ const Modal2 = (props) => {
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <p>Login first!</p>
-                            You can view your collection after logging in.
+                            <p style={{fontSize: 35, fontFamily: 'SpaceMono', marginBottom: 10}}>LOGIN FIRST!</p>
+                            <p style={{fontSize: 20, fontFamily: 'SpaceMono'}}>You can play your collection after logging in.</p>
                         </main>
                         <footer>
                         </footer>
