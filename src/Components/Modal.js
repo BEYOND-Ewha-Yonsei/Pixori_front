@@ -63,8 +63,8 @@ const Modal = (props) => {
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <p>Login first!</p>
-                            You can mint NFTs after logging in.
+                            <p style={{fontSize: 35, fontFamily: 'SpaceMono', marginBottom: 10}}>LOGIN FIRST!</p>
+                            <p style={{fontSize: 20, fontFamily: 'SpaceMono'}}>You can mint NFTs after logging in.</p>
                         </main>
                         <footer>
                         </footer>
