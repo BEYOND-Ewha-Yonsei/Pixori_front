@@ -3,7 +3,7 @@
   top: 40px;
   width: 680px;
   height: 80px;
-  margin: 34px 910px 14px 330px;
+  margin: 34px 910px 30px 330px;
   font-family: SpaceMono;
   font-size: 40px;
   font-weight: bold;
@@ -25,7 +25,6 @@
 .User-ID {
   width: 429px;
   height: 40px;
-  margin: 0 79px 8px 110px;
   font-family: SpaceMono;
   font-size: 24px;
   font-weight: bold;
@@ -35,4 +34,11 @@
   letter-spacing: normal;
   text-align: left;
   color: #846cff;
+}
+.note {
+  color: #846cff;
+  font-weight: bold;
+  font-family: SpaceMono;
+  font-size: 23px;
+  margin-top: 10px;
 }

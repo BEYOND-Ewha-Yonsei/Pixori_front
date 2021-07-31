@@ -2,16 +2,6 @@ import React, { Fragment } from "react"
 import { useCurrentUser } from "../hooks/current-user"
 import '../styles/home.css';
 
-function WithAuth() {
-  const cu = useCurrentUser()
-  
-  return !cu.loggedIn ? null : (
-    <div>
-      <button className="logout" onClick={cu.logOut}>Log out</button>
-    </div>
-  )
-}
-
 function SansAuth() {
   const cu = useCurrentUser()
 
@@ -26,7 +16,6 @@ function SansAuth() {
 export function AuthCluster() {
   return (
     <>
-      <WithAuth />
       <SansAuth />
     </>
   )
