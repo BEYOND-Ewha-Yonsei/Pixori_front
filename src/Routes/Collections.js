@@ -1,21 +1,19 @@
-import {TokenCluster2} from '../clusters/token-cluster2'
-import {useCurrentUser} from '../hooks/current-user'
+import { TokenCluster2 } from '../clusters/token-cluster2'
+import { useCurrentUser } from '../hooks/current-user'
 import React from 'react'
-import {ErrorTokenCluster} from '../clusters/error-token-cluster'
+import { ErrorTokenCluster } from '../clusters/error-token-cluster'
 import "../styles/market.css"
-import { Fragment } from 'react'
-export default () => {
 
-function Token() {
+export default () => {
+  function Token() {
     const cu = useCurrentUser()
-    if(cu.addr) {
-    return (
-      <TokenCluster2 addresss={"0xdb16a5e14c410280"} address={cu.addr} />
-    )
-    } 
+    if (cu.addr) {
+      return (
+        <TokenCluster2 addresss={"0xdb16a5e14c410280"} address={cu.addr} />
+      )
+    }
     else {
       return (
-
         <ErrorTokenCluster />
       )
     }
@@ -26,4 +24,4 @@ function Token() {
       <Token />
     </div>
   );
-} 
+}
