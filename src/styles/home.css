@@ -325,6 +325,10 @@
   text-align: left;
   color: #846cff;
 }
+.Contact {
+  color: #846cff;
+  margin-bottom: 15px;
+}
 .profileicon {
   position: relative;
   left: 1800px;
