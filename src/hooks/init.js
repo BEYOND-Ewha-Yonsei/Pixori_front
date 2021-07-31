@@ -1,8 +1,6 @@
-// File: ./src/hooks/init.js
-
-import {atomFamily, useRecoilState} from "recoil"
-import {isInitialized} from "../flow/is-initialized.script"
-import {initAccount} from "../flow/init-account.tx"
+import { atomFamily, useRecoilState } from "recoil"
+import { isInitialized } from "../flow/is-initialized.script"
+import { initAccount } from "../flow/init-account.tx"
 
 const IDLE = "IDLE"
 const PROCESSING = "PROCESSING"

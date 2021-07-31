@@ -1,5 +1,3 @@
-// File: ./src/flow/profile-set-name.tx.js
-
 import * as fcl from "@onflow/fcl"
 import * as t from "@onflow/types"
 

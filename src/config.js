@@ -1,5 +1,3 @@
-// File: ./src/config.js
-
 import {config} from "@onflow/fcl"
 
 config()

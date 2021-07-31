@@ -1,13 +1,11 @@
 'use strict'
 
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { ChromePicker } from 'react-color'
 
 class ButtonExample extends React.Component {
- 
- 
- 
-    state = {
+
+  state = {
     displayColorPicker: false,
   };
 
@@ -18,12 +16,11 @@ class ButtonExample extends React.Component {
   handleClose = () => {
     this.setState({ displayColorPicker: false })
   };
-  
 
   render() {
     function changeColor(color) {
-        setColor(color.hex);
-      }
+      setColor(color.hex);
+    }
     const [selectedColor, setColor] = useState("000000");
     const popover = {
       position: 'absolute',
@@ -38,11 +35,11 @@ class ButtonExample extends React.Component {
     }
     return (
       <div>
-        <button onClick={ this.handleClick }>Pick Color</button>
-        { this.state.displayColorPicker ? <div style={ popover }>
-          <div style={ cover } onClick={ this.handleClose }/>
-          <ChromePicker color={selectedColor} onChangeComplete={changeColor}  />
-        </div> : null }
+        <button onClick={this.handleClick}>Pick Color</button>
+        {this.state.displayColorPicker ? <div style={popover}>
+          <div style={cover} onClick={this.handleClose} />
+          <ChromePicker color={selectedColor} onChangeComplete={changeColor} />
+        </div> : null}
       </div>
     )
   }

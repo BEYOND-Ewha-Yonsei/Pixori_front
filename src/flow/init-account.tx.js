@@ -1,5 +1,3 @@
-// File: ./src/flow/init-account.tx.js
-
 import * as fcl from "@onflow/fcl"
 
 export async function initAccount() {
@@ -25,10 +23,10 @@ export async function initAccount() {
           }
         }
       `,
-      fcl.payer(fcl.authz), 
-      fcl.proposer(fcl.authz), 
-      fcl.authorizations([fcl.authz]), 
-      fcl.limit(100), 
+      fcl.payer(fcl.authz),
+      fcl.proposer(fcl.authz),
+      fcl.authorizations([fcl.authz]),
+      fcl.limit(100),
     ])
     .then(fcl.decode)
 

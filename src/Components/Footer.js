@@ -11,8 +11,6 @@ function Footer() {
       <h4 className="Contact">© Pixori. All rights reserved.</h4>
     </div>
   )
-
 }
-
 
 export default Footer

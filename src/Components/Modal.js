@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import "../styles/modal.css";
 import { useCurrentUser } from "../hooks/current-user"

@@ -85,6 +85,16 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
+.logOut {
+  padding: 5px 45px 5px 45px;
+  border-color: #6c757d;
+  font-size: 21px;
+  background-color: #846cff;
+  font-weight: lighter;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
 @keyframes modal-show {
   from {
     opacity: 0;

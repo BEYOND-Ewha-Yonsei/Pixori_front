@@ -43,8 +43,6 @@ export function ProfileCluster({address}) {
     <div className="profileCluster">
       <ul>
         <li>
-          <strong>My Name: </strong>
-          <span>{profile.name}</span>
           {profile.isCurrentUser && <span></span>}
           {profile.isProcessing && <span>PROCESSING</span>}
         </li>

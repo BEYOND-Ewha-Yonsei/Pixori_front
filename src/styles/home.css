@@ -226,27 +226,6 @@
   text-align: center;
   color: #846cff;
 }
-.logout {
-  position: relative;
-  left: 1300px;
-  top: -70px;
-  width: 185px;
-  height: 55px;
-  flex-grow: 0;
-  margin: 0 32px 0 184px;
-  padding: 5px 25px 17px 33px;
-  border: solid 1px #846cff;
-  background-color: #f5f7fa;
-  font-family: SpaceMono;
-  font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #846cff;
-}
 .Signrectangle {
   flex-grow: 0;
   font-family: SpaceMono;
@@ -332,7 +311,7 @@
 .profileicon {
   position: relative;
   left: 1800px;
-  top: -130px;
+  top: -80px;
 }
 .profileCluster {
   color: #846cff;
@@ -342,7 +321,15 @@
 .initCluster {
   color: #846cff;
   font-family: SpaceMono;
-  font-size: 16px;
+  font-size: 20px;
+}
+.initButton {
+  background-color: #846cff;
+  color: #ffffff;
+  font-family: SpaceMono;
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
+  margin-top: 15px;
 }
 .profileInput {
   position: relative;
@@ -357,10 +344,10 @@
   text-align: center;
   color: #846cff;
   position: relative;
-  width: 170px;
+  width: 250px;
   height: 40px;
   flex-grow: 0;
-  margin: 10px 0 10px 32px;
+  margin: 10px 0 10px 0px;
   border: solid 3px #846cff;
   background-color: #ffffff;
 }

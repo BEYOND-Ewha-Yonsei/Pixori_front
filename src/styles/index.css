@@ -1,11 +1,11 @@
 /* https://www.pngkey.com/png/full/237-2373068_linuxserver-beets-cartoon-beet-png.png */
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap");
 
 .Home {
   display: flex;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-align: center;
   margin: 9rem 0;
   padding: auto;
@@ -15,54 +15,37 @@
   margin: auto;
   width: 100%;
 }
-
 body {
   background-color: #f7f7f7;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   font-size: 20px;
   color: white;
-
 }
-
 input {
   margin-left: 10px;
   font-size: 20px;
   font-family: fantasy;
   padding-left: 10px;
 }
-
 .table {
-
-
   text-align: center;
   border-spacing: 1px;
-
 }
-
 td.instrument {
   text-align: center;
-  font-family: 'Cabin', sans-serif;
-  
+  font-family: "Cabin", sans-serif;
   padding: 7px;
-  background-color: #846cff  ;
-
-  
- 
+  background-color: #846cff;
 }
-
-.volTempo{
-
+.volTempo {
   position: relative;
   left: 550px;
-  top :-50px;
-
+  top: -50px;
 }
-
 .tempoBorder {
   position: relative;
   left: 0px;
-  top :-30px;
-
+  top: -30px;
   width: 150px;
   height: 50px;
   flex-grow: 0;
@@ -75,9 +58,7 @@ td.instrument {
   letter-spacing: normal;
   text-align: left;
   color: #cbd2d9;
- 
 }
-
 .btnGroup {
   display: flex;
   flex-direction: row;
@@ -87,11 +68,9 @@ td.instrument {
   width: 5px;
   height: 5px;
 }
-
 .volIcon {
   color: #ffffff;
 }
-
 .titleImg {
   display: flex;
   flex-direction: row;
@@ -118,11 +97,9 @@ td.instrument {
 }
 
 .progress_container_purple {
- 
-  
   left: 0px;
-  top :100px;
-  display:opacity;
+  top: 100px;
+  display: opacity;
   width: 1920px;
   height: 90px;
   margin: 112px 0 22px;
@@ -131,8 +108,6 @@ td.instrument {
   background-color: #846cff;
 }
 .btn_play_circle_purple {
- 
-
   width: 56px;
   height: 56px;
   margin: 0 30px 0 0;
@@ -140,61 +115,43 @@ td.instrument {
   /* box-shadow: 0 4px 13px 0 rgba(50, 63, 75, 0.3); */
 }
 .btn_stop_circle_purple {
-
   width: 56px;
   height: 56px;
   margin: 0 52px 0 30px;
   object-fit: contain;
   /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
 }
-.musicplay{
-
+.musicplay {
   position: relative;
   left: 650px;
-  top :-80px;
-
+  top: -80px;
 }
-.mint{
-
+.mint {
   position: relative;
   left: 1650px;
-  top :-130px;
-
+  top: -130px;
 }
-
-.tabledgn{
-
+.tabledgn {
   position: relative;
   left: 450px;
-  top :-80px;
-
+  top: -80px;
 }
-.colorpick{
- 
+.colorpick {
   position: relative;
   left: 850px;
-  top :-150px;
-
+  top: -150px;
 }
-
-.colorpicker{
- 
+.colorpicker {
   border-radius: 50%;
-
 }
-
 .reloadicon {
-
-  
   object-fit: contain;
-  position:relative;
+  position: relative;
   top: 70px;
-  left:-70px;
+  left: -70px;
 }
 .stopbutton {
-
-position: relative;
-top:-90px;
-left:100px
-
+  position: relative;
+  top: -90px;
+  left: 100px;
 }

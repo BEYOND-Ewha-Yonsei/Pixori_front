@@ -16,3 +16,19 @@
   text-align: left;
   color: #846cff;
 }
+.edityourprofile {
+  position: relative;
+  top: 40px;
+  width: 680px;
+  height: 80px;
+  margin: 34px 910px 14px 330px;
+  font-family: SpaceMono;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #846cff;
+}

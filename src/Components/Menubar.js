@@ -6,11 +6,11 @@ import '../styles/home.css';
 import logo from "../img/logo.png"
 
 const Header = styled.header`
-    width:100%;
-    height:50px;
-    display:flex;
+    width: 100%;
+    height: 50px;
+    display: flex;
     background-color: #f5f7fa;
-    padding : 0px 10px;
+    padding: 0px 10px;
 `;
 const List = styled.ul`
   display: flex;`;
