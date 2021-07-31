@@ -1,5 +1,4 @@
 import React from 'react';
-
 import useStyles from './ColorPicker.styles';
 
 const ColorPicker = ({ currentColor, onSetColor }) => {
@@ -7,6 +6,7 @@ const ColorPicker = ({ currentColor, onSetColor }) => {
   const colorChange = (event) => {
     onSetColor(event.target.value);
   };
+  
   return (
     <input
       className={classes.colorPicker}

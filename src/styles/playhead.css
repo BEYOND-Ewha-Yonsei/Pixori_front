@@ -4,16 +4,12 @@
   opacity: 0.9;
   border-radius: 3px;
 }
-
 .inactive {
-
-  background-color:#ffffff;
+  background-color: #ffffff;
   padding: 15px;
   opacity: 0.5;
   border-radius: 3px;
 }
-
 .hidden {
-  
   display: none;
 }

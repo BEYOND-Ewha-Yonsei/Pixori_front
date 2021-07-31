@@ -33,7 +33,7 @@ export function TokenCluster({addresss, address}) {
   }, [cu.addr]) */
 
   return (
-    <div style={{fontSize: 40, fontFamily: 'SpaceMono', margin: '63px 30px 60px 330px'}}>Coming soon!
+    <div style={{fontSize: 40, fontFamily: 'SpaceMono', margin: '100px 30px 60px 330px'}}>Coming soon!
       {/* {
         nftInfo &&
         <div>

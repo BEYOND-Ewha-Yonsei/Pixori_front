@@ -1,4 +1,3 @@
-// File: ./src/hooks/profile.js
 import {atomFamily, useRecoilState} from "recoil"
 import {fetchProfile} from "../flow/fetch-profile.script"
 import {setName as profileSetName} from "../flow/profile-set-name.tx"
