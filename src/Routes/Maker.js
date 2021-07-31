@@ -28,6 +28,7 @@ const Home = () => {
   const closeModal = () => {
     setModalOpen(false);
   }
+  const [hash, setHash] = useState("0");
   const panelRef = useRef()
   const [selectedColor, setColor] = useState("#000000");
 
@@ -260,9 +261,9 @@ const Home = () => {
   //store playHeadComponent in a variable for readability
   const playHeadComponent = playHead();
 
-  // Extract an image
-  const createPNG = (e) => {
-    html2canvas(e.target.parentElement).then(function (canvas) {
+  // Function when clicking 'Mint!'
+  const create = () => {
+    html2canvas(document.getElementById("table")).then(function (canvas) {
       var myImg = canvas.toDataURL("image/png");
       var pngBuffer = Buffer(myImg);
       const ipfsApi = require('ipfs-api');
@@ -273,18 +274,11 @@ const Home = () => {
         if (err) {
           return "error";
         }
-
-        let url = `https://ipfs.io/ipfs/${result[0].hash}`
-        console.log(url);
-
+        var fileHash = `${result[0].hash}`;
+        setHash(fileHash);
+        openModal();
       });
     });
-  }
-
-  // Function when clicking 'Mint!'
-  const create = (e) => {
-    openModal();
-    createPNG(e);
   }
 
   const reloadd = () => {
@@ -314,7 +308,7 @@ const Home = () => {
             style={{ background: "ffffff", padding: '27px' }}
             onClick={create}>Mint!
           </Button>
-          <Modal open={modalOpen} close={closeModal} header="" arr={arr1}>
+          <Modal open={modalOpen} close={closeModal} header="" arr={arr1} hash={hash}>
           </Modal>
         </div>
         <br />
