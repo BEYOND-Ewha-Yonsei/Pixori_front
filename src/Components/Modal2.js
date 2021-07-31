@@ -1,53 +1,37 @@
-import React,{useState} from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 import "../styles/smodal.css";
-import { Button } from '@material-ui/core';
-import {useCurrentUser} from "../hooks/current-user"
-import {MintCluster} from '../clusters/mint-cluster'
-import {InitCluster} from "../clusters/init-cluster"
-import {ProfileCluster} from '../clusters/profile-cluster'
-import {CurrentUserSubscription} from "../hooks/current-user"
-import {Link,withRouter} from "react-router-dom";
+import { useCurrentUser } from "../hooks/current-user"
+import { useProfile } from "../hooks/profile"
 
-const Modal2 = ( props ) => {
-
-  
-    // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
+const Modal2 = (props) => {
     const cu = useCurrentUser();
-    const { open, close, header, address} = props;
-
-    const [nftName, setNftName] = useState("initial value")
-    function set() {
-        setNftName(document.getElementById("input").value)
-        console.log(nftName)
-      }
+    const profile = useProfile(cu.addr)
+    const { open, close, header } = props;
 
     if (cu.addr) {
         return (
-            // 모달이 열릴때 openModal 클래스가 생성된다.
-            <div className={ open ? 'openModal modal2' : 'modal2' }>
-                { open ? (  
+            <div className={open ? 'openModal modal2' : 'modal2'}>
+                {open ? (
                     <section>
                         <header>
                             {header}
                             <button className="close" onClick={close}> &times; </button>
                         </header>
                         <main>
-                            <CurrentUserSubscription />
-                            <ProfileCluster address={address}/>
-                            <InitCluster address={address}/>
-
-                            <Link to="/profile" className="myprofile">edit profile</Link>
+                            <p className="profileName">{profile.name}</p>
+                            <Link to="/profile" className="editProfile">Edit profile</Link>
                         </main>
                         <footer>
                         </footer>
                     </section>
-                ) : null }
+                ) : null}
             </div>
         )
     } else {
         return (
-            <div className={ open ? 'openModal modal2' : 'modal2' }>
-                { open ? (  
+            <div className={open ? 'openModal modal2' : 'modal2'}>
+                {open ? (
                     <section>
                         <header>
                             {header}
@@ -55,15 +39,15 @@ const Modal2 = ( props ) => {
                         </header>
                         <main>
                             <p>Login first!</p>
-                             You can view your collection after logging in.
+                            You can view your collection after logging in.
                         </main>
                         <footer>
                         </footer>
                     </section>
-                ) : null }
-            </div> 
+                ) : null}
+            </div>
         )
     }
-    
+
 }
 export default Modal2

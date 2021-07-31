@@ -1,84 +1,106 @@
 .modal2 {
-    display: none;
-    position: fixed;
-    top: -550px;
-    right: 0;
-    bottom: 0;
-    left: 1500px;
-    z-index: 99;
-  
+  display: none;
+  position: fixed;
+  top: -550px;
+  right: 0;
+  bottom: 0;
+  left: 1500px;
+  z-index: 99;
 }
 .modal2 button {
-    outline: none;
-    cursor: pointer;
-    border: 0;
+  outline: none;
+  cursor: pointer;
+  border: 0;
 }
 .modal2 > section {
-    width: 90%;
-    max-width: 450px;
-    margin:0 auto;
-    border-radius: .3rem;
-    background-color: #fff;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
-    animation: modal-show .3s;
-    overflow: hidden;
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-show 0.3s;
+  overflow: hidden;
 }
 .modal2 > section > header {
-    position: relative;
-    padding: 16px 64px 16px 16px;
-    background-color: #f1f1f1;
-    font-weight: 700;
+  position: relative;
+  padding: 16px 64px 16px 16px;
+  background-color: #f1f1f1;
+  font-weight: 700;
 }
 .modal2 > section > header button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 30px;
-    font-size: 21px;
-    font-weight: 700;
-    text-align: center;
-    color: #999;
-    background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  color: #999;
+  background-color: transparent;
 }
 .modal2 > section > main {
-    height: 300px;
-    padding: 16px;
-    border-bottom: 1px solid #dee2e6;
-    border-top: 1px solid #dee2e6;
+  height: 300px;
+  padding: 16px;
+  border-bottom: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
 }
 .modal2 > section > footer {
-    padding: 12px 16px;
-    text-align: right;
+  padding: 12px 16px;
+  text-align: right;
 }
 .modal2 > section > footer button {
-    padding: 6px 12px;
-    color: #fff;
-    background-color: #6c757d;
-    border-radius: 5px;
-    font-size: 13px;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #6c757d;
+  border-radius: 5px;
+  font-size: 13px;
 }
 .modal2.openModal {
-    display: flex;
-    align-items: center;
-    /* 팝업이 열릴때 스르륵 열리는 효과 */
-    animation: modal-bg-show .3s;
+  display: flex;
+  align-items: center;
+  /* 팝업이 열릴때 스르륵 열리는 효과 */
+  animation: modal-bg-show 0.3s;
+}
+.profileName {
+  font-family: SpaceMono;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #846cff;
+  margin-bottom: 15px;
+}
+.editProfile {
+  object-fit: contain;
+  font-size: 21px;
+  font-weight: lighter;
+  color: black;
+  border: solid 1px #846cff;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 @keyframes modal-show {
-    from {
-        opacity: 0;
-        margin-top: -50px;
-        width: 800px;
-    }
-    to {
-        opacity: 1;
-        margin-top: 0;
-    }
+  from {
+    opacity: 0;
+    margin-top: -50px;
+    width: 800px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
 }
 @keyframes modal-bg-show {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
