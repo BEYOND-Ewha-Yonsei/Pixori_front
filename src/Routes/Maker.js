@@ -178,7 +178,7 @@ const Home = () => {
         // create an array of up to 6 sounds that are then played at the same time
         loop();
         // increments counter based on current tempo
-        if (counter < 32) {
+        if (counter < 31) {
           setCounter((prevState) => ++prevState);
         } else {
           setCounter(0);
