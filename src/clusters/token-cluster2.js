@@ -41,7 +41,7 @@ export function TokenCluster2({ addresss, address }) {
       <div className="edityourprofile">My Collection</div>
       {
         nftInfo &&
-        <div className="">
+        <div className="collections">
           {Object.keys(nftInfo).map(k => {
             colorArr[k] = nftInfo[k].color
             return (

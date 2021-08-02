@@ -1,9 +1,10 @@
 .card_marketplace {
   width: 400px;
   height: 172px;
-  margin: 63px 30px 60px 330px;
+  margin: 63px 30px 60px 200px;
   object-fit: contain;
   border: solid 1px #846cff;
+  display:inline-table;
 }
 .NftName {
   font-family: SpaceMono;
