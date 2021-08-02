@@ -312,8 +312,8 @@ const Home = () => {
           </Modal>
         </div>
         <br />
-        <div className="volTempo">
-          <Button onClick={reloadd}><img className="reloadicon" src={reload} /></Button>
+        <div className="volTempo" >
+          <Button className="reloadicon" onClick={reloadd}><img  src={reload} /></Button>
           <Tempo value={tempo} onTempoChange={(event) => { handleTempoChange(event); }} >
             <img className="volTempo2" src={bpmbutton}></img>
           </Tempo>
