@@ -9,7 +9,7 @@ const InstrumentRow = (props) => {
   }
   return (
     <tr>
-
+     
       {squares}
     </tr>
   )

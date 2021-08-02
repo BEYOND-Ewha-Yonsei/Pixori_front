@@ -145,7 +145,7 @@ const Home = () => {
 
   //Iterate through the array of collected sounds compiled from our grid in loop()
   const playSounds = (array) => {
-    for (let i = 0; i < 32; i++) {
+    for (let i = 0; i < array.length; i++) {
       playSound(array[i]);
     }
   };
