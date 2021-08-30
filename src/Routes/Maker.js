@@ -170,22 +170,35 @@ const Home = () => {
   //useEffect re-renders and runs our beat machine functions if IsPlaying per tick of setInterval
   useEffect(() => {
     //is the beat machine playing?
+    
+   
+    
     if (isPlaying) {
       //set an interval to perform player logic
+      if (counter === 32) {
+        
+        return;
+      }
       const interval = setInterval(() => {
         //animate the playHead based on counter positionc
         playHeadLoop();
         // create an array of up to 6 sounds that are then played at the same time
         loop();
         // increments counter based on current tempo
-        if (counter < 31) {
+        if (counter < 32) {
           setCounter((prevState) => ++prevState);
-        } else {
-          setCounter(0);
+        } 
+        else{
+          setCounter(31);
+  
+    
         }
       }, beats);
+
+   
       return () => clearInterval(interval);
     }
+    
     resetSquares();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying, beats, counter]);
