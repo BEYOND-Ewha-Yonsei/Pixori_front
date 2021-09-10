@@ -170,14 +170,11 @@ const Home = () => {
   //useEffect re-renders and runs our beat machine functions if IsPlaying per tick of setInterval
   useEffect(() => {
     //is the beat machine playing?
-    
-   
-    
     if (isPlaying) {
       //set an interval to perform player logic
       if (counter === 32) {
         
-        return;
+        setIsPlaying(!isPlaying);
       }
       const interval = setInterval(() => {
         //animate the playHead based on counter positionc
@@ -189,7 +186,7 @@ const Home = () => {
           setCounter((prevState) => ++prevState);
         } 
         else{
-          setCounter(31);
+          setCounter(32);
   
     
         }
