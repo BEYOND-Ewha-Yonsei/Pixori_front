@@ -337,8 +337,8 @@ const Home = () => {
             onSetColor={setColor} />
         </div>
         <br />
-        <table border="2" className="tabledgn">
-          <tbody id="table" ref={panelRef}>
+        <table id="table" border="2" className="tabledgn">
+          <tbody ref={panelRef}>
             {instrumentRows}
           </tbody>
         </table>
