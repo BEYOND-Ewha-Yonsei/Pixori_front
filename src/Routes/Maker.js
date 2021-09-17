@@ -273,7 +273,10 @@ const Home = () => {
 
   // Function when clicking 'Mint!'
   const create = () => {
-    html2canvas(document.getElementById("table")).then(function (canvas) {
+    html2canvas(document.getElementById("table"), {
+      scrollX: -window.scrollX,
+      scrollY: -window.scrollY
+    }).then(function (canvas) {
       var myImg = canvas.toDataURL("image/png");
       var pngBuffer = Buffer(myImg);
       const ipfsApi = require('ipfs-api');
