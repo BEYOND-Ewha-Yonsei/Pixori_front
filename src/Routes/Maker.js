@@ -186,7 +186,7 @@ const Home = () => {
           setCounter((prevState) => ++prevState);
         } 
         else{
-          setCounter(32);
+          setCounter(1);
   
     
         }

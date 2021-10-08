@@ -42,13 +42,39 @@
   margin: 71px 373px 0 97.8px;
   padding: 4px 10px 1px;
   background-color: #846cff;
-}
-.What-is-Pixori {
+}.enjoynft{
+  width: 664px;
+  height: 224px;
+  margin: 0 73px 57px 345px;
+  font-family: SpaceMono;
+  font-size: 54px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+  color: #846cff;
+
+
+} .withenjoy{width: 1354px;
+height: 88px;
+
+font-family: SpaceMono;
+font-size: 24px;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.34;
+letter-spacing: normal;
+text-align: center;
+color: #a695ff;}
+.MakeandMint {
   width: 724px;
   height: 51px;
   margin: 52px 594px 33.5px 602px;
-  -webkit-text-stroke: 3px #846cff;
-  font-family: SpaceMono;
+  color: #846cff;
+  
   font-size: 46px;
   font-weight: bold;
   font-stretch: normal;
@@ -56,6 +82,27 @@
   line-height: 1.34;
   letter-spacing: normal;
   text-align: center;
+}
+.Rectangle-1022 {
+  width: 1920px;
+  height: 1080px;
+ 
+  padding: 126px 296px 96px 270px;
+  background-color: #f5f7fa;
+}
+.withpixori{
+  width: 926px;
+  height: 88px;
+  margin: 160px 594px 33.5px 502px;
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a695ff;
 }
 .Create-your-own-NFTs {
   width: 232px;
@@ -109,13 +156,68 @@
   border: solid 1px #846cff;
   background-color: #846cff;
 }
+.Thenshare{width: 832px;
+  height: 83px;
+  margin: 44px 182px 85px;
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.42;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;}
+  .withdisplay{
+
+
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+ 
+  text-align: center;
+  color: #a695ff;
+  }
+  .gird3{
+    width: 732px;
+    height: 538px;
+    margin: 24px 314px 0 340px;
+    object-fit: contain;
+    box-shadow: 0 0 21px 6px rgba(132, 108, 255, 0.2);
+  }
+  .Share{
+    
+      width: 782px;
+      height: 224px;
+      margin:  100px 0 0 551px;
+      font-family: SpaceMono;
+      font-size: 54px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.34;
+      letter-spacing: normal;
+      text-align: center;
+      color: #846cff;
+    
+  }
 .grid {
-  width: 1920px;
-  height: 503px;
-  border-style: solid;
-  border-width: 1px;
-  border-image-source: linear-gradient(to top, #70f6f3, #846cff);
-  border-image-slice: 1;
+  width: 805px;
+  height: 465px;
+  margin: 58px 58px 0 553px;
+  object-fit: contain;
+  box-shadow: 0 0 21px 6px rgba(132, 108, 255, 0.2);
+}
+.grid2 {
+  width: 805px;
+  height: 465px;
+  margin: 0 0 0 277px;
+  padding: 63px 624px 353px 82px;
+  object-fit: contain;
+  box-shadow: 0 0 21px 6px rgba(132, 108, 255, 0.2);
 }
 .Frame-5 {
   width: 241px;
@@ -152,9 +254,9 @@
   margin: 0 0 0 315px;
 }
 .img_pixelart_cherry {
-  width: 1920px;
-  height: 503px;
-  margin: 33.5px 0 172.5px;
+   width: 220px;
+  height: 55px;
+  margin: 85px 488px 0;
   padding: 34.5px 340px 88.5px;
   object-fit: contain;
   border-style: solid;
