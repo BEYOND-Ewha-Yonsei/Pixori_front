@@ -57,18 +57,7 @@
   color: #846cff;
 
 
-} .withenjoy{width: 1354px;
-height: 88px;
-
-font-family: SpaceMono;
-font-size: 24px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.34;
-letter-spacing: normal;
-text-align: center;
-color: #a695ff;}
+} 
 .MakeandMint {
   width: 724px;
   height: 51px;
@@ -83,13 +72,7 @@ color: #a695ff;}
   letter-spacing: normal;
   text-align: center;
 }
-.Rectangle-1022 {
-  width: 1920px;
-  height: 1080px;
- 
-  padding: 126px 296px 96px 270px;
-  background-color: #f5f7fa;
-}
+
 .withpixori{
   width: 926px;
   height: 88px;
@@ -104,6 +87,32 @@ color: #a695ff;}
   text-align: center;
   color: #a695ff;
 }
+.withenjoy{width: 1354px;
+  height: 88px;
+  margin: 160px 594px 33.5px 02px;
+  font-family: SpaceMono;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.34;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a695ff;}
+  .withdisplay{
+    width: 1354px;
+    height: 88px;
+    margin:  0 0 0 250px;
+    font-family: SpaceMono;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+   
+    text-align: center;
+    color: #a695ff;
+    }
 .Create-your-own-NFTs {
   width: 232px;
   height: 27px;
@@ -147,15 +156,7 @@ color: #a695ff;}
   margin: 5.2px 107px 8.5px 2.9px;
   background-color: #846cff;
 }
-.Rectangle-491 {
-  display: inline-block;
-  width: 1920px;
-  height: 588px;
-  margin: 112px 0 52px;
-  padding: 59px 362px 61px;
-  border: solid 1px #846cff;
-  background-color: #846cff;
-}
+
 .Thenshare{width: 832px;
   height: 83px;
   margin: 44px 182px 85px;
@@ -168,19 +169,7 @@ color: #a695ff;}
   letter-spacing: normal;
   text-align: center;
   color: #fff;}
-  .withdisplay{
 
-
-  font-family: SpaceMono;
-  font-size: 24px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.34;
- 
-  text-align: center;
-  color: #a695ff;
-  }
   .gird3{
     width: 732px;
     height: 538px;
@@ -215,7 +204,16 @@ color: #a695ff;}
   width: 805px;
   height: 465px;
   margin: 0 0 0 277px;
-  padding: 63px 624px 353px 82px;
+
+  object-fit: contain;
+  box-shadow: 0 0 21px 6px rgba(132, 108, 255, 0.2);
+}
+
+.grid3 {
+  width: 805px;
+  height: 465px;
+  margin: 100px 0px 100px 553px;
+
   object-fit: contain;
   box-shadow: 0 0 21px 6px rgba(132, 108, 255, 0.2);
 }
@@ -347,6 +345,29 @@ color: #a695ff;}
   flex-grow: 0;
   margin: 0 0 0 32px;
   padding: 12px 9px 16px;
+  border: solid 1px #846cff;
+  background-color: #846cff;
+}
+.Rectangle-1022 {
+  width: 1920px;
+  height: 1080px;
+ 
+  padding: 126px 296px 96px 270px;
+  background-color: #f5f7fa;
+}
+.Rectangle-491 {
+
+  width: 1920px;
+  height: 1080px;
+
+  padding: 126px 296px 96px 270px;
+
+ 
+  
+  width: 1920px;
+  height: 588px;
+  margin: 112px 0 52px;
+  padding: 59px 362px 61px;
   border: solid 1px #846cff;
   background-color: #846cff;
 }
